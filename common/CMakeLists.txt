@@ -218,7 +218,7 @@ if(APPLE)
 	target_link_options(common PRIVATE -fobjc-link-runtime)
 endif()
 
-if(USE_OPENGL)
+if(USE_OPENGL AND NOT LIBRETRO)
 	if(WIN32)
 		target_sources(common PRIVATE
 			GL/ContextWGL.cpp
@@ -310,6 +310,6 @@ target_include_directories(common PUBLIC ../3rdparty/include ../)
 target_compile_definitions(common PUBLIC "${PCSX2_DEFS}")
 target_compile_options(common PRIVATE "${PCSX2_WARNINGS}")
 
-if(COMMAND target_precompile_headers)
+if(COMMAND target_precompile_headers AND NOT CCACHE_FOUND)
 	target_precompile_headers(common PRIVATE PrecompiledHeader.h)
 endif()

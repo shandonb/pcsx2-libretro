@@ -1294,6 +1294,7 @@ void GSDeviceMTL::EndPresent()
 	FlushEncoders();
 	FrameCompleted();
 	m_current_drawable = nullptr;
+#if !defined(__LIBRETRO__)
 	if (m_capture_start_frame)
 	{
 		if (@available(macOS 10.15, iOS 13, *))
@@ -1342,6 +1343,7 @@ void GSDeviceMTL::EndPresent()
 			}
 		}
 	}
+#endif
 }}
 
 void GSDeviceMTL::SetVSync(VsyncMode mode)

@@ -286,6 +286,7 @@ void VirtualMemoryReserve::Release()
 		return;
 
 	m_allocator->Free(m_baseptr, m_size);
+	m_allocator.reset();
 	m_baseptr = nullptr;
 	m_size = 0;
 }

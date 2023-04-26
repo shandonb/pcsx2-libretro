@@ -15,6 +15,7 @@
 
 #pragma once
 
+#include "PrecompiledHeader.h"
 #include "common/emitter/tools.h"
 #include "common/General.h"
 #include <array>
@@ -1282,7 +1283,9 @@ struct Pcsx2Config
 	FramerateOptions Framerate;
 	SPU2Options SPU2;
 	DEV9Options DEV9;
+#ifndef __LIBRETRO__
 	USBOptions USB;
+#endif
 
 	TraceLogFilters Trace;
 

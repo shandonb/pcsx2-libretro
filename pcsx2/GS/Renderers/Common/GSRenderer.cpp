@@ -574,9 +574,10 @@ void GSRenderer::VSync(u32 field, bool registers_written, bool idle_frame)
 
 	if (skip_frame)
 	{
+		g_gs_device->ResetAPIState();
 		if (BeginPresentFrame(true))
 			EndPresentFrame();
-
+		g_gs_device->RestoreAPIState();
 		PerformanceMetrics::Update(registers_written, fb_sprite_frame, true);
 		return;
 	}
@@ -595,10 +596,15 @@ void GSRenderer::VSync(u32 field, bool registers_written, bool idle_frame)
 	if (current && !blank_frame)
 	{
 		src_rect = CalculateDrawSrcRect(current);
+#ifdef __LIBRETRO__
+		src_uv = GSVector4(0, 0, 1, 1);
+		draw_rect = GSVector4(0, 0, current->GetWidth(), current->GetHeight());
+#else
 		src_uv = GSVector4(src_rect) / GSVector4(current->GetSize()).xyxy();
 		draw_rect = CalculateDrawDstRect(g_gs_device->GetWindowWidth(), g_gs_device->GetWindowHeight(),
 			src_rect, current->GetSize(), s_display_alignment, g_gs_device->UsesLowerLeftOrigin(),
 			GetVideoMode() == GSVideoMode::SDTV_480P || (GSConfig.PCRTCOverscan && GSConfig.PCRTCOffsets));
+#endif
 		s_last_draw_rect = draw_rect;
 
 		if (GSConfig.CASMode != GSCASMode::Disabled)
@@ -621,6 +627,7 @@ void GSRenderer::VSync(u32 field, bool registers_written, bool idle_frame)
 		}
 	}
 
+	g_gs_device->ResetAPIState();
 	if (BeginPresentFrame(false))
 	{
 		if (current && !blank_frame)
@@ -637,7 +644,7 @@ void GSRenderer::VSync(u32 field, bool registers_written, bool idle_frame)
 		if (GSConfig.OsdShowGPU)
 			PerformanceMetrics::OnGPUPresent(g_gs_device->GetAndResetAccumulatedGPUTime());
 	}
-
+	g_gs_device->RestoreAPIState();
 	PerformanceMetrics::Update(registers_written, fb_sprite_frame, false);
 
 	// snapshot
@@ -836,6 +843,7 @@ void GSRenderer::StopGSDump()
 
 void GSRenderer::PresentCurrentFrame()
 {
+	g_gs_device->ResetAPIState();
 	if (BeginPresentFrame(false))
 	{
 		GSTexture* current = g_gs_device->GetCurrent();
@@ -857,6 +865,7 @@ void GSRenderer::PresentCurrentFrame()
 
 		EndPresentFrame();
 	}
+	g_gs_device->RestoreAPIState();
 }
 
 void GSTranslateWindowToDisplayCoordinates(float window_x, float window_y, float* display_x, float* display_y)

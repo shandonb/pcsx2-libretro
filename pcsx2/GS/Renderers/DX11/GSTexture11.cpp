@@ -117,6 +117,9 @@ void GSTexture11::Unmap()
 
 bool GSTexture11::Save(const std::string& fn)
 {
+#ifdef __LIBRETRO__
+	return true;
+#else
 	D3D11_TEXTURE2D_DESC desc = m_desc;
 	desc.Usage = D3D11_USAGE_STAGING;
 	desc.BindFlags = 0;
@@ -208,6 +211,7 @@ bool GSTexture11::Save(const std::string& fn)
 	GSDevice11::GetInstance()->GetD3DContext()->Unmap(res.get(), 0);
 
 	return success;
+#endif
 }
 
 void GSTexture11::GenerateMipmap()

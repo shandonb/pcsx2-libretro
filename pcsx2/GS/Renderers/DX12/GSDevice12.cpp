@@ -38,6 +38,12 @@
 #include <sstream>
 #include <limits>
 
+#ifdef __LIBRETRO__
+#include "libretro_d3d.h"
+extern retro_hw_render_interface_d3d12 *d3d12;
+extern retro_video_refresh_t video_cb;
+#endif
+
 static bool IsDATMConvertShader(ShaderConvert i) { return (i == ShaderConvert::DATM_0 || i == ShaderConvert::DATM_1); }
 static bool IsDATEModePrimIDInit(u32 flag) { return flag == 1 || flag == 2; }
 
@@ -115,7 +121,11 @@ RenderAPI GSDevice12::GetRenderAPI() const
 
 bool GSDevice12::HasSurface() const
 {
+#ifdef __LIBRETRO__
+	return true;
+#else
 	return static_cast<bool>(m_swap_chain);
+#endif
 }
 
 bool GSDevice12::Create()
@@ -225,6 +235,7 @@ void GSDevice12::Destroy()
 
 bool GSDevice12::GetHostRefreshRate(float* refresh_rate)
 {
+#ifndef __LIBRETRO__
 	if (m_swap_chain && m_is_exclusive_fullscreen)
 	{
 		DXGI_SWAP_CHAIN_DESC desc;
@@ -238,6 +249,7 @@ bool GSDevice12::GetHostRefreshRate(float* refresh_rate)
 			return true;
 		}
 	}
+#endif
 
 	return GSDevice::GetHostRefreshRate(refresh_rate);
 }
@@ -249,6 +261,7 @@ void GSDevice12::SetVSync(VsyncMode mode)
 
 bool GSDevice12::CreateSwapChain()
 {
+#ifndef __LIBRETRO__
 	constexpr DXGI_FORMAT swap_chain_format = DXGI_FORMAT_R8G8B8A8_UNORM;
 
 	if (m_window_info.type != WindowInfo::Type::Win32)
@@ -324,6 +337,7 @@ bool GSDevice12::CreateSwapChain()
 	hr = m_dxgi_factory->MakeWindowAssociation(window_hwnd, DXGI_MWA_NO_WINDOW_CHANGES);
 	if (FAILED(hr))
 		Console.Warning("MakeWindowAssociation() to disable ALT+ENTER failed");
+#endif
 
 	if (!CreateSwapChainRTV())
 	{
@@ -331,6 +345,7 @@ bool GSDevice12::CreateSwapChain()
 		return false;
 	}
 
+#ifndef __LIBRETRO__
 	// Render a frame as soon as possible to clear out whatever was previously being displayed.
 	EndRenderPass();
 	D3D12::Texture& swap_chain_buf = m_swap_chain_buffers[m_current_swap_chain_buffer];
@@ -341,11 +356,13 @@ bool GSDevice12::CreateSwapChain()
 	swap_chain_buf.TransitionToState(cmdlist, D3D12_RESOURCE_STATE_PRESENT);
 	ExecuteCommandList(false);
 	m_swap_chain->Present(0, m_using_allow_tearing ? DXGI_PRESENT_ALLOW_TEARING : 0);
+#endif
 	return true;
 }
 
 bool GSDevice12::CreateSwapChainRTV()
 {
+#ifndef __LIBRETRO__
 	DXGI_SWAP_CHAIN_DESC swap_chain_desc;
 	HRESULT hr = m_swap_chain->GetDesc(&swap_chain_desc);
 	if (FAILED(hr))
@@ -394,19 +411,23 @@ bool GSDevice12::CreateSwapChainRTV()
 	}
 
 	m_current_swap_chain_buffer = 0;
+#endif
 	return true;
 }
 
 void GSDevice12::DestroySwapChainRTVs()
 {
+#ifndef __LIBRETRO__
 	for (D3D12::Texture& buffer : m_swap_chain_buffers)
 		buffer.Destroy(false);
 	m_swap_chain_buffers.clear();
 	m_current_swap_chain_buffer = 0;
+#endif
 }
 
 void GSDevice12::DestroySwapChain()
 {
+#ifndef __LIBRETRO__
 	if (!m_swap_chain)
 		return;
 
@@ -419,6 +440,7 @@ void GSDevice12::DestroySwapChain()
 
 	m_swap_chain.reset();
 	m_is_exclusive_fullscreen = false;
+#endif
 }
 
 bool GSDevice12::UpdateWindow()
@@ -441,8 +463,10 @@ bool GSDevice12::UpdateWindow()
 
 void GSDevice12::DestroySurface()
 {
+#ifndef __LIBRETRO__
 	ExecuteCommandList(true);
 	DestroySwapChain();
+#endif
 }
 
 std::string GSDevice12::GetDriverInfo() const
@@ -489,6 +513,7 @@ std::string GSDevice12::GetDriverInfo() const
 
 void GSDevice12::ResizeWindow(s32 new_window_width, s32 new_window_height, float new_window_scale)
 {
+#ifndef __LIBRETRO__
 	if (!m_swap_chain)
 		return;
 
@@ -508,6 +533,7 @@ void GSDevice12::ResizeWindow(s32 new_window_width, s32 new_window_height, float
 
 	if (!CreateSwapChainRTV())
 		pxFailRel("Failed to recreate swap chain RTV after resize");
+#endif
 }
 
 bool GSDevice12::SupportsExclusiveFullscreen() const
@@ -522,6 +548,7 @@ GSDevice::PresentResult GSDevice12::BeginPresent(bool frame_skip)
 	if (m_device_lost)
 		return PresentResult::DeviceLost;
 
+#ifndef __LIBRETRO__
 	if (frame_skip || !m_swap_chain)
 		return PresentResult::FrameSkipped;
 
@@ -549,11 +576,13 @@ GSDevice::PresentResult GSDevice12::BeginPresent(bool frame_skip)
 		0, 0, static_cast<LONG>(m_window_info.surface_width), static_cast<LONG>(m_window_info.surface_height)};
 	cmdlist->RSSetViewports(1, &vp);
 	cmdlist->RSSetScissorRects(1, &scissor);
+#endif
 	return PresentResult::OK;
 }
 
 void GSDevice12::EndPresent()
 {
+#ifndef __LIBRETRO__
 	RenderImGui();
 
 	D3D12::Texture& swap_chain_buf = m_swap_chain_buffers[m_current_swap_chain_buffer];
@@ -572,6 +601,7 @@ void GSDevice12::EndPresent()
 		m_swap_chain->Present(0, DXGI_PRESENT_ALLOW_TEARING);
 	else
 		m_swap_chain->Present(static_cast<UINT>(vsync), 0);
+#endif
 
 	InvalidateCachedState();
 }
@@ -855,6 +885,14 @@ void GSDevice12::StretchRect(GSTexture* sTex, const GSVector4& sRect, GSTexture*
 void GSDevice12::PresentRect(GSTexture* sTex, const GSVector4& sRect, GSTexture* dTex, const GSVector4& dRect,
 	PresentShader shader, float shaderTime, bool linear)
 {
+#ifdef __LIBRETRO__
+	GSTexture12* texture = (GSTexture12*)sTex;
+	texture->TransitionToState(d3d12->required_state);
+	g_d3d12_context->ExecuteCommandList(D3D12::Context::WaitType::None);
+
+	d3d12->set_texture(d3d12->handle, texture->GetTexture().GetResource(), texture->GetTexture().GetResource()->GetDesc().Format);
+	video_cb(RETRO_HW_FRAME_BUFFER_VALID, texture->GetWidth(), texture->GetHeight(), 0);
+#else
 	DisplayConstantBuffer cb;
 	cb.SetSource(sRect, sTex->GetSize());
 	cb.SetTarget(dRect, dTex ? dTex->GetSize() : GSVector2i(GetWindowWidth(), GetWindowHeight()));
@@ -864,6 +902,7 @@ void GSDevice12::PresentRect(GSTexture* sTex, const GSVector4& sRect, GSTexture*
 
 	DoStretchRect(static_cast<GSTexture12*>(sTex), sRect, static_cast<GSTexture12*>(dTex), dRect,
 		m_present[static_cast<int>(shader)].get(), linear, true);
+#endif
 }
 
 void GSDevice12::UpdateCLUTTexture(GSTexture* sTex, float sScale, u32 offsetX, u32 offsetY, GSTexture* dTex, u32 dOffset, u32 dSize)
@@ -3367,4 +3406,14 @@ void GSDevice12::UploadHWDrawVerticesAndIndices(const GSHWDrawConfig& config)
 	{
 		IASetIndexBuffer(config.indices, config.nindices);
 	}
+}
+
+void GSDevice12::ResetAPIState()
+{
+	EndRenderPass();
+}
+
+void GSDevice12::RestoreAPIState()
+{
+	InvalidateCachedState();
 }

@@ -15,6 +15,7 @@
 
 #pragma once
 
+#include <cstdio>
 #include <vector>
 #include <cstdio>
 #include "common/Pcsx2Types.h"

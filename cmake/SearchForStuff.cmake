@@ -73,9 +73,12 @@ else()
 		endif()
 	endif()
 
+	if(APPLE)
+		add_subdirectory(3rdparty/soundtouch EXCLUDE_FROM_ALL)
+	endif()
 	check_lib(SOUNDTOUCH SoundTouch SoundTouch.h PATH_SUFFIXES soundtouch)
 
-	if(NOT QT_BUILD)
+	if(NOT QT_BUILD AND NOT APPLE)
 		find_optional_system_library(SDL2 3rdparty/sdl2 2.0.12)
 	endif()
 

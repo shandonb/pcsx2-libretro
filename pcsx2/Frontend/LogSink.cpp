@@ -412,8 +412,9 @@ void CommonHost::UpdateLogging(SettingsInterface& si)
 	// Input Recording Logs
 	SysConsole.recordingConsole.Enabled = any_logging_sinks && si.GetBoolValue("Logging", "EnableInputRecordingLogs", true);
 	SysConsole.controlInfo.Enabled = any_logging_sinks && si.GetBoolValue("Logging", "EnableControllerLogs", false);
-
+#ifndef __LIBRETRO__
 	UpdateLoggingSinks(system_console_enabled, file_logging_enabled);
+#endif
 }
 
 void CommonHost::SetDefaultLoggingSettings(SettingsInterface& si)

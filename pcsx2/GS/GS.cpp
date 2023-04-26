@@ -64,6 +64,10 @@ static HRESULT s_hr = E_FAIL;
 
 #endif
 
+#ifdef __LIBRETRO__
+#include "Renderers/Null/GSDeviceNull.h"
+#endif
+
 #include <fstream>
 
 // do NOT undefine this/put it above includes, as x11 people love to redefine
@@ -81,7 +85,7 @@ int GSinit()
 
 	GSUtil::Init();
 
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(__LIBRETRO__)
 	s_hr = ::CoInitializeEx(NULL, COINIT_MULTITHREADED);
 #endif
 
@@ -92,7 +96,7 @@ void GSshutdown()
 {
 	GSclose();
 
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(__LIBRETRO__)
 	if (SUCCEEDED(s_hr))
 	{
 		::CoUninitialize();
@@ -107,9 +111,26 @@ void GSshutdown()
 
 static RenderAPI GetAPIForRenderer(GSRendererType renderer)
 {
+#ifdef __LIBRETRO__
+	switch(hw_render.context_type)
+	{
+	case RETRO_HW_CONTEXT_D3D11:
+		return RenderAPI::D3D11;
+	case RETRO_HW_CONTEXT_D3D12:
+		return RenderAPI::D3D12;
+	case RETRO_HW_CONTEXT_VULKAN:
+		return RenderAPI::Vulkan;
+	case RETRO_HW_CONTEXT_NONE:
+		return RenderAPI::None;
+	default:
+		break;
+	}
+	return RenderAPI::OpenGL;
+#else
 	switch (renderer)
 	{
 		case GSRendererType::OGL:
+		case GSRendererType::SW:
 			return RenderAPI::OpenGL;
 
 		case GSRendererType::VK:
@@ -131,6 +152,7 @@ static RenderAPI GetAPIForRenderer(GSRendererType renderer)
 		default:
 			return GetAPIForRenderer(GSUtil::GetPreferredRenderer());
 	}
+#endif
 }
 
 static bool OpenGSDevice(GSRendererType renderer, bool clear_state_on_fail, bool recreate_window)
@@ -162,7 +184,11 @@ static bool OpenGSDevice(GSRendererType renderer, bool clear_state_on_fail, bool
 			g_gs_device = std::make_unique<GSDeviceVK>();
 			break;
 #endif
-
+#ifdef __LIBRETRO__
+		case RenderAPI::None:
+			g_gs_device = std::make_unique<GSDeviceNull>();
+		break;
+#endif
 		default:
 			Console.Error("Unsupported render API %s", GSDevice::RenderAPIToString(new_api));
 			return false;
@@ -761,6 +787,7 @@ void GSUpdateConfig(const Pcsx2Config::GSOptions& new_config)
 
 
 	// Handle OSD scale changes by pushing a window resize through.
+#ifndef __LIBRETRO__
 	if (new_config.OsdScale != old_config.OsdScale)
 		ImGuiManager::WindowResized();
 
@@ -771,7 +798,7 @@ void GSUpdateConfig(const Pcsx2Config::GSOptions& new_config)
 			pxFailRel("Failed to do full GS reopen");
 		return;
 	}
-
+#endif
 	// Options which aren't using the global struct yet, so we need to recreate all GS objects.
 	if (
 		GSConfig.SWExtraThreads != old_config.SWExtraThreads ||

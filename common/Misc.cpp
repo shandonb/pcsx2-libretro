@@ -13,6 +13,7 @@
  *  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <algorithm>
 #include "General.h"
 #include "Console.h"
 
