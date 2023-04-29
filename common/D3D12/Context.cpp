@@ -28,6 +28,12 @@
 #include <queue>
 #include <vector>
 
+#ifdef __LIBRETRO__
+#include <libretro_d3d.h>
+extern retro_environment_t environ_cb;
+retro_hw_render_interface_d3d12 *d3d12;
+#endif
+
 std::unique_ptr<D3D12::Context> g_d3d12_context;
 
 using namespace D3D12;
@@ -136,6 +142,18 @@ bool Context::Create(IDXGIFactory5* dxgi_factory, IDXGIAdapter1* adapter, bool e
 	}
 
 	g_d3d12_context.reset(new Context());
+#ifdef __LIBRETRO__
+	d3d12 = nullptr;
+	if (!environ_cb(RETRO_ENVIRONMENT_GET_HW_RENDER_INTERFACE, (void **)&d3d12) || !d3d12) {
+		printf("Failed to get HW rendering interface!\n");
+		return false;
+	}
+
+	if (d3d12->interface_version != RETRO_HW_RENDER_INTERFACE_D3D12_VERSION) {
+		printf("HW render interface mismatch, expected %u, got %u!\n", RETRO_HW_RENDER_INTERFACE_D3D12_VERSION, d3d12->interface_version);
+		return false;
+	}
+#endif
 	if (!g_d3d12_context->CreateDevice(dxgi_factory, adapter, enable_debug_layer) ||
 		!g_d3d12_context->CreateCommandQueue() || !g_d3d12_context->CreateAllocator() ||
 		!g_d3d12_context->CreateFence() || !g_d3d12_context->CreateDescriptorHeaps() ||
@@ -171,6 +189,9 @@ u32 Context::GetAdapterVendorID() const
 
 bool Context::CreateDevice(IDXGIFactory5* dxgi_factory, IDXGIAdapter1* adapter, bool enable_debug_layer)
 {
+#ifdef __LIBRETRO__
+	m_device = d3d12->device;
+#else
 	HRESULT hr;
 
 	// Enabling the debug layer will fail if the Graphics Tools feature is not installed.
@@ -195,12 +216,12 @@ bool Context::CreateDevice(IDXGIFactory5* dxgi_factory, IDXGIAdapter1* adapter, 
 		Console.Error("Failed to create D3D12 device: %08X", hr);
 		return false;
 	}
-
+#endif
 	// get adapter
 	const LUID luid(m_device->GetAdapterLuid());
 	if (FAILED(dxgi_factory->EnumAdapterByLuid(luid, IID_PPV_ARGS(m_adapter.put()))))
 		Console.Error("Failed to get lookup adapter by device LUID");
-
+#ifndef __LIBRETRO__
 	if (enable_debug_layer)
 	{
 		ComPtr<ID3D12InfoQueue> info_queue = m_device.try_query<ID3D12InfoQueue>();
@@ -225,17 +246,22 @@ bool Context::CreateDevice(IDXGIFactory5* dxgi_factory, IDXGIAdapter1* adapter, 
 			info_queue->PushStorageFilter(&filter);
 		}
 	}
-
+#endif
 	return true;
 }
 
 bool Context::CreateCommandQueue()
 {
+#ifdef __LIBRETRO__
+	m_command_queue = d3d12->queue;
+	return true;
+#else
 	const D3D12_COMMAND_QUEUE_DESC queue_desc = {D3D12_COMMAND_LIST_TYPE_DIRECT, D3D12_COMMAND_QUEUE_PRIORITY_NORMAL,
 		D3D12_COMMAND_QUEUE_FLAG_NONE};
 	HRESULT hr = m_device->CreateCommandQueue(&queue_desc, IID_PPV_ARGS(&m_command_queue));
 	pxAssertRel(SUCCEEDED(hr), "Create command queue");
 	return SUCCEEDED(hr);
+#endif
 }
 
 bool Context::CreateAllocator()

@@ -152,6 +152,7 @@ namespace HostMemoryMap
 /// Attempts to find a spot near static variables for the main memory
 static VirtualMemoryManagerPtr makeMemoryManager(const char* name, const char* file_mapping_name, size_t size, size_t offset_from_base)
 {
+#if !defined(__LIBRETRO__) || defined(_WIN32)
 	// Everything looks nicer when the start of all the sections is a nice round looking number.
 	// Also reduces the variation in the address due to small changes in code.
 	// Breaks ASLR but so does anything else that tries to make addresses constant for our debugging pleasure
@@ -169,7 +170,11 @@ static VirtualMemoryManagerPtr makeMemoryManager(const char* name, const char* f
 			// VTLB will throw a fit if we try to put EE main memory here
 			continue;
 		}
+#if defined(__LIBRETRO__) && defined(_DEBUG) && !defined(_WIN32)
+		auto mgr = std::make_shared<VirtualMemoryManager>(name, file_mapping_name, base, size, /*upper_bounds=*/0, /*strict=*/false);
+#else
 		auto mgr = std::make_shared<VirtualMemoryManager>(name, file_mapping_name, base, size, /*upper_bounds=*/0, /*strict=*/true);
+#endif
 		if (mgr->IsOk())
 		{
 			return mgr;
@@ -182,6 +187,7 @@ static VirtualMemoryManagerPtr makeMemoryManager(const char* name, const char* f
 	{
 		pxAssertRel(0, "Failed to find a good place for the memory allocation, recompilers may fail");
 	}
+#endif
 	return std::make_shared<VirtualMemoryManager>(name, file_mapping_name, 0, size);
 }
 

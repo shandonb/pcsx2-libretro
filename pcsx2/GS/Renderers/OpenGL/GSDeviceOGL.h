@@ -304,6 +304,9 @@ public:
 	bool SetGPUTimingEnabled(bool enabled) override;
 	float GetAndResetAccumulatedGPUTime() override;
 
+	void ResetAPIState() override;
+	void RestoreAPIState() override;
+
 	void DrawPrimitive();
 	void DrawIndexedPrimitive();
 	void DrawIndexedPrimitive(int offset, int count);

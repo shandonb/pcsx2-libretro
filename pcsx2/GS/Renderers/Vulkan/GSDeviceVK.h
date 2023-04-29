@@ -250,6 +250,9 @@ public:
 	bool SetGPUTimingEnabled(bool enabled) override;
 	float GetAndResetAccumulatedGPUTime() override;
 
+	void ResetAPIState() override;
+	void RestoreAPIState() override;
+
 	void PushDebugGroup(const char* fmt, ...) override;
 	void PopDebugGroup() override;
 	void InsertDebugMessage(DebugMessageCategory category, const char* fmt, ...) override;

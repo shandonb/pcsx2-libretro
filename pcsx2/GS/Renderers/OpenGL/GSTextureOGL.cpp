@@ -339,6 +339,9 @@ void GSTextureOGL::GenerateMipmap()
 
 bool GSTextureOGL::Save(const std::string& fn)
 {
+#ifdef __LIBRETRO__
+	return true;
+#else
 	// Collect the texture data
 	u32 pitch = 4 * m_size.x;
 	u32 buf_size = pitch * m_size.y * 2; // Note *2 for security (depth/stencil)
@@ -356,7 +359,7 @@ bool GSTextureOGL::Save(const std::string& fn)
 		glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, m_texture_id, 0);
 		glReadPixels(0, 0, m_size.x, m_size.y, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, image.get());
 
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 
 		fmt = GSPng::RGB_A_PNG;
 	}
@@ -388,10 +391,11 @@ bool GSTextureOGL::Save(const std::string& fn)
 			glReadPixels(0, 0, m_size.x, m_size.y, GL_RED, GL_UNSIGNED_BYTE, image.get());
 		}
 
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 	}
 
 	return GSPng::Save(fmt, fn, image.get(), m_size.x, m_size.y, pitch, GSConfig.PNGCompressionLevel);
+#endif
 }
 
 void GSTextureOGL::Swap(GSTexture* tex)
@@ -518,7 +522,7 @@ void GSDownloadTextureOGL::CopyFromTexture(
 
 	glReadPixels(src.left, src.top, src.width(), src.height(), glTex->GetIntFormat(), glTex->GetIntType(), m_cpu_buffer + copy_offset);
 
-	glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 
 	if (m_cpu_buffer)
 	{

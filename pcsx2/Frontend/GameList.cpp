@@ -1170,6 +1170,7 @@ std::string GameList::GetNewCoverImagePathForEntry(const Entry* entry, const cha
 bool GameList::DownloadCovers(const std::vector<std::string>& url_templates, bool use_serial, ProgressCallback* progress,
 	std::function<void(const Entry*, std::string)> save_callback)
 {
+#ifndef __LIBRETRO__
 	if (!progress)
 		progress = ProgressCallback::NullProgressCallback;
 
@@ -1290,5 +1291,6 @@ bool GameList::DownloadCovers(const std::vector<std::string>& url_templates, boo
 		progress->IncrementProgressValue();
 	}
 
+#endif
 	return true;
 }

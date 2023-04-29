@@ -193,9 +193,11 @@ void VMManager::SetState(VMState state)
 		const bool paused = (state == VMState::Paused);
 		if (paused)
 		{
+#ifndef __LIBRETRO__
 			if (THREAD_VU1)
 				vu1Thread.WaitVU();
 			GetMTGS().WaitGS(false);
+#endif
 		}
 		else
 		{
@@ -251,7 +253,7 @@ bool VMManager::Internal::InitializeGlobals()
 	// On Win32, we have a bunch of things which use COM (e.g. SDL, XAudio2, etc).
 	// We need to initialize COM first, before anything else does, because otherwise they might
 	// initialize it in single-threaded/apartment mode, which can't be changed to multithreaded.
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(__LIBRETRO__)
 	HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
 	if (FAILED(hr))
 	{
@@ -293,7 +295,7 @@ void VMManager::Internal::ReleaseGlobals()
 	SPU2::Shutdown();
 	GSshutdown();
 
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(__LIBRETRO__)
 	CoUninitialize();
 #endif
 }
@@ -1649,7 +1651,7 @@ void VMManager::Internal::VSyncOnCPUThread()
 	}
 
 	Host::CPUThreadVSync();
-
+#ifndef __LIBRETRO__
 	if (EmuConfig.EnableRecordingTools)
 	{
 		// This code is called _before_ Counter's vsync end, and _after_ vsync start
@@ -1666,6 +1668,7 @@ void VMManager::Internal::VSyncOnCPUThread()
 		// so we can either read from it, or overwrite it!
 		g_InputRecording.handleControllerDataUpdate();
 	}
+#endif
 }
 
 void VMManager::CheckForCPUConfigChanges(const Pcsx2Config& old_config)

@@ -32,6 +32,13 @@ include(Pcsx2Utils)
 check_no_parenthesis_in_path()
 detectOperatingSystem()
 check_compiler_version("7.0" "7.0")
+if(NOT MSVC)
+   find_program(CCACHE_FOUND ccache)
+   if(CCACHE_FOUND)
+       set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ${CCACHE_FOUND})
+       set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ${CCACHE_FOUND})
+   endif()
+endif()
 
 #-------------------------------------------------------------------------------
 # Include specific module
@@ -58,6 +65,10 @@ if (QT_BUILD)
 	if (WIN32)
 		add_subdirectory(updater)
 	endif()
+endif()
+
+if(LIBRETRO)
+   add_subdirectory(libretro)
 endif()
 
 # tests

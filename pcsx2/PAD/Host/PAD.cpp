@@ -252,6 +252,7 @@ const char* PAD::GetDefaultPadType(u32 pad)
 
 void PAD::SetDefaultControllerConfig(SettingsInterface& si)
 {
+#ifndef __LIBRETRO__
 	si.ClearSection("InputSources");
 	si.ClearSection("Hotkeys");
 	si.ClearSection("Pad");
@@ -315,6 +316,7 @@ void PAD::SetDefaultControllerConfig(SettingsInterface& si)
 	// PCSX2 Controller Settings - Controller 1 / Controller 2 / ...
 	// Use the automapper to set this up.
 	MapController(si, 0, InputManager::GetGenericBindingMapping("Keyboard"));
+#endif
 }
 
 void PAD::SetDefaultHotkeyConfig(SettingsInterface& si)
@@ -528,6 +530,7 @@ void PAD::ClearPortBindings(SettingsInterface& si, u32 port)
 void PAD::CopyConfiguration(SettingsInterface* dest_si, const SettingsInterface& src_si,
 	bool copy_pad_config, bool copy_pad_bindings, bool copy_hotkey_bindings)
 {
+#ifndef __LIBRETRO__
 	if (copy_pad_config)
 	{
 		dest_si->CopyBoolValue(src_si, "Pad", "MultitapPort1");
@@ -614,6 +617,7 @@ void PAD::CopyConfiguration(SettingsInterface* dest_si, const SettingsInterface&
 		for (const HotkeyInfo* hki : hotkeys)
 			dest_si->CopyStringListValue(src_si, "Hotkeys", hki->name);
 	}
+#endif
 }
 
 static u32 TryMapGenericMapping(SettingsInterface& si, const std::string& section,

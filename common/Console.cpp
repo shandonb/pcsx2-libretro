@@ -80,6 +80,11 @@ static void MSW_OutputDebugString(const char* text)
 	static bool hasDebugger = IsDebuggerPresent();
 	if (hasDebugger)
 		OutputDebugStringA(text);
+	else
+	{
+		printf(text);
+		fflush(stdout);
+	}
 #else
 	fputs(text, stdout_fp);
 	fflush(stdout_fp);

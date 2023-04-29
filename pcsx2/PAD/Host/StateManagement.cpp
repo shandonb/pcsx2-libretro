@@ -135,10 +135,12 @@ void Pad::rumble(unsigned port)
 
 	currentVibrate[0] = nextVibrate[0];
 	currentVibrate[1] = nextVibrate[1];
+#ifndef __LIBRETRO__
 	InputManager::SetPadVibrationIntensity(port,
 		std::min(static_cast<float>(currentVibrate[0]) * g_key_status.GetVibrationScale(port, 0) * (1.0f / 255.0f), 1.0f),
 		std::min(static_cast<float>(currentVibrate[1]) * g_key_status.GetVibrationScale(port, 1) * (1.0f / 255.0f), 1.0f)
 	);
+#endif
 }
 
 void Pad::stop_vibrate_all()

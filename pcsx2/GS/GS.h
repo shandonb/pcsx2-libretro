@@ -147,3 +147,12 @@ namespace Host
 	/// Returns the desired vsync mode, depending on the runtime environment.
 	VsyncMode GetEffectiveVSyncMode();
 }
+
+#ifdef __LIBRETRO__
+#include <libretro.h>
+#include "options.h"
+extern retro_hw_render_callback hw_render;
+#define GL_DEFAULT_FRAMEBUFFER hw_render.get_current_framebuffer()
+#else
+#define GL_DEFAULT_FRAMEBUFFER 0
+#endif

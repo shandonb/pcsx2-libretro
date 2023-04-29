@@ -85,9 +85,11 @@ static bool s_discord_presence_active = false;
 
 bool CommonHost::InitializeCriticalFolders()
 {
+#ifndef __LIBRETRO__
 	SetAppRoot();
 	SetResourcesDirectory();
 	SetDataDirectory();
+#endif
 
 	// logging of directories in case something goes wrong super early
 	Console.WriteLn("AppRoot Directory: %s", EmuFolders::AppRoot.c_str());
