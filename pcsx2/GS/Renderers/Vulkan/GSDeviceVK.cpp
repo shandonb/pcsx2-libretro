@@ -32,7 +32,9 @@
 #include "common/Path.h"
 #include "common/ScopedGuard.h"
 
+#ifndef __LIBRETRO__
 #include "imgui.h"
+#endif
 
 #include <sstream>
 #include <limits>
@@ -2366,6 +2368,7 @@ bool GSDeviceVK::CompileCASPipelines()
 
 bool GSDeviceVK::CompileImGuiPipeline()
 {
+#ifndef __LIBRETRO__
 	const std::optional<std::string> glsl = Host::ReadResourceFileToString("shaders/vulkan/imgui.glsl");
 	if (!glsl.has_value())
 	{
@@ -2415,11 +2418,13 @@ bool GSDeviceVK::CompileImGuiPipeline()
 	}
 
 	Vulkan::Util::SetObjectName(g_vulkan_context->GetDevice(), m_imgui_pipeline, "ImGui pipeline");
+#endif
 	return true;
 }
 
 void GSDeviceVK::RenderImGui()
 {
+#ifndef __LIBRETRO__
 	ImGui::Render();
 	const ImDrawData* draw_data = ImGui::GetDrawData();
 	if (draw_data->CmdListsCount == 0)
@@ -2495,6 +2500,7 @@ void GSDeviceVK::RenderImGui()
 
 		g_perfmon.Put(GSPerfMon::DrawCalls, cmd_list->CmdBuffer.Size);
 	}
+#endif
 }
 
 void GSDeviceVK::RenderBlankFrame()
@@ -2632,7 +2638,9 @@ void GSDeviceVK::DestroyResources()
 		Vulkan::Util::SafeDestroyPipeline(it);
 	Vulkan::Util::SafeDestroyPipelineLayout(m_cas_pipeline_layout);
 	Vulkan::Util::SafeDestroyDescriptorSetLayout(m_cas_ds_layout);
+#ifndef __LIBRETRO__
 	Vulkan::Util::SafeDestroyPipeline(m_imgui_pipeline);
+#endif
 
 	for (auto& it : m_samplers)
 		Vulkan::Util::SafeDestroySampler(it.second);

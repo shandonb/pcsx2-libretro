@@ -250,6 +250,7 @@ private:
 		wil::com_ptr_nothrow<ID3D11ComputeShader> cs_sharpen;
 	} m_cas;
 
+#ifndef __LIBRETRO__
 	struct
 	{
 		wil::com_ptr_nothrow<ID3D11InputLayout> il;
@@ -258,6 +259,7 @@ private:
 		wil::com_ptr_nothrow<ID3D11BlendState> bs;
 		wil::com_ptr_nothrow<ID3D11Buffer> vs_cb;
 	} m_imgui;
+#endif
 
 	// Shaders...
 

@@ -25,7 +25,9 @@
 
 #include "common/StringUtil.h"
 
+#ifndef __LIBRETRO__
 #include "imgui.h"
+#endif
 #include "IconsFontAwesome5.h"
 
 #include <cinttypes>
@@ -607,9 +609,11 @@ void GSDeviceOGL::DestroyResources()
 	if (m_ps_ss[0] != 0)
 		glDeleteSamplers(std::size(m_ps_ss), m_ps_ss);
 
+#ifndef __LIBRETRO__
 	m_imgui.ps.Destroy();
 	if (m_imgui.vao != 0)
 		glDeleteVertexArrays(1, &m_imgui.vao);
+#endif
 
 	m_cas.upscale_ps.Destroy();
 	m_cas.sharpen_ps.Destroy();
@@ -2008,6 +2012,7 @@ bool GSDeviceOGL::DoCAS(GSTexture* sTex, GSTexture* dTex, bool sharpen_only, con
 
 bool GSDeviceOGL::CreateImGuiProgram()
 {
+#ifndef __LIBRETRO__
 	std::optional<std::string> glsl = Host::ReadResourceFileToString("shaders/opengl/imgui.glsl");
 	if (!glsl.has_value())
 	{
@@ -2042,11 +2047,13 @@ bool GSDeviceOGL::CreateImGuiProgram()
 	glVertexAttribPointer(2, 4, GL_UNSIGNED_BYTE, GL_TRUE, sizeof(ImDrawVert), (GLvoid*)IM_OFFSETOF(ImDrawVert, col));
 
 	glBindVertexArray(GLState::vao);
+#endif
 	return true;
 }
 
 void GSDeviceOGL::RenderImGui()
 {
+#ifndef __LIBRETRO__
 	ImGui::Render();
 	const ImDrawData* draw_data = ImGui::GetDrawData();
 	if (draw_data->CmdListsCount == 0)
@@ -2128,6 +2135,7 @@ void GSDeviceOGL::RenderImGui()
 
 	IASetVAO(m_vao);
 	glScissor(GLState::scissor.x, GLState::scissor.y, GLState::scissor.width(), GLState::scissor.height());
+#endif
 }
 
 void GSDeviceOGL::RenderBlankFrame()

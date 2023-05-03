@@ -33,7 +33,9 @@
 #include "common/StringUtil.h"
 
 #include "D3D12MemAlloc.h"
+#ifndef __LIBRETRO__
 #include "imgui.h"
+#endif
 
 #include <sstream>
 #include <limits>
@@ -210,8 +212,10 @@ bool GSDevice12::Create()
 	}
 
 	CompileCASPipelines();
+#ifndef __LIBRETRO__
 	if (!CompileImGuiPipeline())
 		return false;
+#endif
 
 	InitializeState();
 	InitializeSamplers();
@@ -1361,6 +1365,7 @@ bool GSDevice12::CompileCASPipelines()
 
 bool GSDevice12::CompileImGuiPipeline()
 {
+#ifndef __LIBRETRO__
 	const std::optional<std::string> hlsl = Host::ReadResourceFileToString("shaders/dx11/imgui.fx");
 	if (!hlsl.has_value())
 	{
@@ -1398,11 +1403,13 @@ bool GSDevice12::CompileImGuiPipeline()
 	}
 
 	D3D12::SetObjectName(m_imgui_pipeline.get(), "ImGui pipeline");
+#endif
 	return true;
 }
 
 void GSDevice12::RenderImGui()
 {
+#ifndef __LIBRETRO__
 	ImGui::Render();
 	const ImDrawData* draw_data = ImGui::GetDrawData();
 	if (draw_data->CmdListsCount == 0)
@@ -1502,6 +1509,7 @@ void GSDevice12::RenderImGui()
 
 		g_perfmon.Put(GSPerfMon::DrawCalls, cmd_list->CmdBuffer.Size);
 	}
+#endif
 }
 
 bool GSDevice12::DoCAS(GSTexture* sTex, GSTexture* dTex, bool sharpen_only, const std::array<u32, NUM_CAS_CONSTANTS>& constants)
@@ -2143,7 +2151,9 @@ void GSDevice12::DestroyResources()
 	m_date_image_setup_pipelines = {};
 	m_fxaa_pipeline.reset();
 	m_shadeboost_pipeline.reset();
+#ifndef __LIBRETRO__
 	m_imgui_pipeline.reset();
+#endif
 
 	m_linear_sampler_cpu.Clear();
 	m_point_sampler_cpu.Clear();

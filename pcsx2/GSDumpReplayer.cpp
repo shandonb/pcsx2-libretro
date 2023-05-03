@@ -23,12 +23,16 @@
 #include "common/StringUtil.h"
 #include "common/Timer.h"
 
+#ifndef __LIBRETRO__
 #include "imgui.h"
+#endif
 
 // Has to come before Gif.h
 #include "MemoryTypes.h"
 
+#ifndef __LIBRETRO__
 #include "Frontend/ImGuiManager.h"
+#endif
 #include "Frontend/GameList.h"
 #include "Gif.h"
 #include "Gif_Unit.h"

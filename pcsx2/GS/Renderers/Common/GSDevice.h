@@ -759,7 +759,9 @@ protected:
 	WindowInfo m_window_info;
 	VsyncMode m_vsync_mode = VsyncMode::Off;
 
+#ifndef __LIBRETRO__
 	GSTexture* m_imgui_font = nullptr;
+#endif
 
 	GSTexture* m_merge = nullptr;
 	GSTexture* m_weavebob = nullptr;

@@ -27,7 +27,9 @@
 #include "common/Path.h"
 #include "common/StringUtil.h"
 
+#ifndef __LIBRETRO__
 #include "imgui.h"
+#endif
 
 #include <fstream>
 #include <sstream>
@@ -525,7 +527,9 @@ void GSDevice11::Destroy()
 	m_shadeboost = {};
 	m_date = {};
 	m_cas = {};
+#ifndef __LIBRETRO__
 	m_imgui = {};
+#endif
 
 	m_vb.reset();
 	m_ib.reset();
@@ -1732,6 +1736,7 @@ bool GSDevice11::CreateImGuiResources()
 		return false;
 	}
 
+#ifndef __LIBRETRO__
 	// clang-format off
 	static constexpr D3D11_INPUT_ELEMENT_DESC layout[] =
 	{
@@ -1775,12 +1780,14 @@ bool GSDevice11::CreateImGuiResources()
 		Console.Error("CreateImGuiResources(): CreateBlendState() failed: %08X", hr);
 		return false;
 	}
+#endif
 
 	return true;
 }
 
 void GSDevice11::RenderImGui()
 {
+#ifndef __LIBRETRO__
 	ImGui::Render();
 	const ImDrawData* draw_data = ImGui::GetDrawData();
 	if (draw_data->CmdListsCount == 0)
@@ -1879,6 +1886,7 @@ void GSDevice11::RenderImGui()
 	}
 
 	m_ctx->IASetVertexBuffers(0, 1, m_vb.addressof(), &m_state.vb_stride, &vb_offset);
+#endif
 }
 
 void GSDevice11::SetupDATE(GSTexture* rt, GSTexture* ds, const GSVertexPT1* vertices, bool datm)

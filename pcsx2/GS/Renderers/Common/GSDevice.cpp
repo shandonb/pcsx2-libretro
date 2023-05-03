@@ -22,7 +22,9 @@
 #include "common/Align.h"
 #include "common/StringUtil.h"
 
+#ifndef __LIBRETRO__
 #include "imgui.h"
+#endif
 
 #include <algorithm>
 
@@ -192,11 +194,13 @@ bool GSDevice::Create()
 
 void GSDevice::Destroy()
 {
+#ifndef __LIBRETRO__
 	if (m_imgui_font)
 	{
 		Recycle(m_imgui_font);
 		m_imgui_font = nullptr;
 	}
+#endif
 
 	ClearCurrent();
 	PurgePool();
@@ -237,6 +241,7 @@ bool GSDevice::GetHostRefreshRate(float* refresh_rate)
 
 bool GSDevice::UpdateImGuiFontTexture()
 {
+#ifndef __LIBRETRO__
 	ImGuiIO& io = ImGui::GetIO();
 
 	unsigned char* pixels;
@@ -265,6 +270,7 @@ bool GSDevice::UpdateImGuiFontTexture()
 
 	m_imgui_font = new_font;
 	ImGui::GetIO().Fonts->SetTexID(new_font->GetNativeHandle());
+#endif
 	return true;
 }
 

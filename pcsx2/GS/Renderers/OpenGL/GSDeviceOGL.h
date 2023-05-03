@@ -211,11 +211,13 @@ private:
 		GL::Program sharpen_ps;
 	} m_cas;
 
+#ifndef __LIBRETRO__
 	struct
 	{
 		GL::Program ps;
 		GLuint vao = 0;
 	} m_imgui;
+#endif
 
 	GLuint m_ps_ss[1 << 8];
 	GSDepthStencilOGL* m_om_dss[1 << 5] = {};

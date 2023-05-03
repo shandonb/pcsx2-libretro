@@ -774,17 +774,27 @@ set(pcsx2DebugToolsHeaders
 	DebugTools/DisVUops.h
 	DebugTools/BiosDebugData.h)
 
+if(NOT LIBRETRO)
 # Frontend sources
-set(pcsx2FrontendSources
-	Frontend/ImGuiManager.cpp
-	Frontend/ImGuiOverlays.cpp
-)
+	set(pcsx2FrontendSources
+		Frontend/ImGuiManager.cpp
+		Frontend/ImGuiOverlays.cpp
+	)
 
 # Frontend headers
-set(pcsx2FrontendHeaders
-	Frontend/ImGuiManager.h
-	Frontend/ImGuiOverlays.h
+	set(pcsx2FrontendHeaders
+		Frontend/ImGuiManager.h
+		Frontend/ImGuiOverlays.h
+	)
+
+list(APPEND pcsx2FrontendSources
+	Frontend/ImGuiFullscreen.cpp
 )
+list(APPEND pcsx2FrontendHeaders
+	Frontend/ImGuiFullscreen.h
+)
+endif()
+
 
 if(APPLE)
 	list(APPEND pcsx2GSSources
@@ -808,7 +818,6 @@ list(APPEND pcsx2FrontendSources
 	Frontend/FullscreenUI.cpp
 	Frontend/GameList.cpp
 	Frontend/HostSettings.cpp
-	Frontend/ImGuiFullscreen.cpp
 	Frontend/InputManager.cpp
 	Frontend/InputSource.cpp
 	Frontend/LayeredSettingsInterface.cpp
@@ -821,7 +830,6 @@ list(APPEND pcsx2FrontendHeaders
 	Frontend/CommonHost.h
 	Frontend/FullscreenUI.h
 	Frontend/GameList.h
-	Frontend/ImGuiFullscreen.h
 	Frontend/InputManager.h
 	Frontend/InputSource.h
 	Frontend/LayeredSettingsInterface.h
@@ -1162,9 +1170,14 @@ if(UNIX AND NOT Linux)
 		${pcsx2LinuxHeaders})
 endif()
 
+if (NOT LIBRETRO)
+target_link_libraries(PCSX2_FLAGS INTERFACE
+	imgui
+)
+endif()
+
 target_link_libraries(PCSX2_FLAGS INTERFACE
 	common
-	imgui
 	fmt::fmt
 	ryml
 	chdr-static
