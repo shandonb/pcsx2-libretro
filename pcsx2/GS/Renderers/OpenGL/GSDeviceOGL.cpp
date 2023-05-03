@@ -76,7 +76,7 @@ void GSDeviceOGL::SetVSync(VsyncMode mode)
 	// Window framebuffer has to be bound to call SetSwapInterval.
 	GLint current_fbo = 0;
 	glGetIntegerv(GL_DRAW_FRAMEBUFFER_BINDING, &current_fbo);
-	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 
 	if (mode != VsyncMode::Adaptive || !m_gl_context->SetSwapInterval(-1))
 		m_gl_context->SetSwapInterval(static_cast<s32>(mode != VsyncMode::Off));
@@ -228,7 +228,7 @@ bool GSDeviceOGL::Create()
 		// Always read from the first buffer
 		glBindFramebuffer(GL_READ_FRAMEBUFFER, m_fbo_read);
 		glReadBuffer(GL_COLOR_ATTACHMENT0);
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 	}
 
 	// ****************************************************************
@@ -744,8 +744,9 @@ GSDevice::PresentResult GSDeviceOGL::BeginPresent(bool frame_skip)
 
 void GSDeviceOGL::EndPresent()
 {
+#ifndef __LIBRETRO__
 	RenderImGui();
-
+#endif
 	if (m_gpu_timing_enabled)
 		PopTimestampQuery();
 
@@ -870,6 +871,80 @@ float GSDeviceOGL::GetAndResetAccumulatedGPUTime()
 	const float value = m_accumulated_gpu_time;
 	m_accumulated_gpu_time = 0.0f;
 	return value;
+}
+
+void GSDeviceOGL::ResetAPIState()
+{
+	if (GLState::point_size)
+		glDisable(GL_PROGRAM_POINT_SIZE);
+	if (GLState::line_width != 1.0f)
+		glLineWidth(1.0f);
+
+	// clear out DSB
+	glBlendFuncSeparate(GL_ONE, GL_ZERO, GL_ONE, GL_ZERO);
+	glDisable(GL_BLEND);
+	glActiveTexture(GL_TEXTURE0);
+}
+
+void GSDeviceOGL::RestoreAPIState()
+{
+	glBindVertexArray(m_vao);
+
+	if(GLState::fbo)
+		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GLState::fbo);
+	else
+		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
+
+	glViewportIndexedf(0, 0, 0, static_cast<float>(GLState::viewport.x), static_cast<float>(GLState::viewport.y));
+	glScissorIndexed(0, GLState::scissor.x, GLState::scissor.y, GLState::scissor.width(), GLState::scissor.height());
+
+	glBlendEquationSeparate(GLState::eq_RGB, GL_FUNC_ADD);
+	glBlendFuncSeparate(GLState::f_sRGB, GLState::f_dRGB, GL_ONE, GL_ZERO);
+
+	const float bf = static_cast<float>(GLState::bf) / 128.0f;
+	glBlendColor(bf, bf, bf, bf);
+
+	if (GLState::blend)
+	{
+		glEnable(GL_BLEND);
+	}
+	else
+	{
+		glDisable(GL_BLEND);
+	}
+
+	const OMColorMaskSelector msel{ GLState::wrgba };
+	glColorMask(msel.wr, msel.wg, msel.wb, msel.wa);
+
+	GLState::depth ? glEnable(GL_DEPTH_TEST) : glDisable(GL_DEPTH_TEST);
+	glDepthFunc(GLState::depth_func);
+	glDepthMask(GLState::depth_mask);
+
+	if (GLState::stencil)
+	{
+		glEnable(GL_STENCIL_TEST);
+	}
+	else
+	{
+		glDisable(GL_STENCIL_TEST);
+	}
+
+	glStencilFunc(GLState::stencil_func, 1, 1);
+	glStencilOp(GL_KEEP, GL_KEEP, GLState::stencil_pass);
+
+	glBindSampler(0, GLState::ps_ss);
+
+	for (GLuint i = 0; i < sizeof(GLState::tex_unit) / sizeof(GLState::tex_unit[0]); i++)
+		glBindTextureUnit(i, GLState::tex_unit[i]);
+
+	if (GLState::point_size)
+		glEnable(GL_PROGRAM_POINT_SIZE);
+	if (GLState::line_width != 1.0f)
+		glLineWidth(GLState::line_width);
+
+	// Force UBOs to be reuploaded, we don't know what else was bound there.
+	std::memset(&m_vs_cb_cache, 0xFF, sizeof(m_vs_cb_cache));
+	std::memset(&m_ps_cb_cache, 0xFF, sizeof(m_ps_cb_cache));
 }
 
 void GSDeviceOGL::DrawPrimitive()
@@ -1321,8 +1396,15 @@ void GSDeviceOGL::CopyRect(GSTexture* sTex, GSTexture* dTex, const GSVector4i& r
 	}
 	else
 	{
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, m_fbo_read);
-		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_fbo_write);
+		if(m_fbo_read)
+			glBindFramebuffer(GL_READ_FRAMEBUFFER, m_fbo_read);
+		else
+			glBindFramebuffer(GL_READ_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
+		if(m_fbo_write)
+			glBindFramebuffer(GL_DRAW_FRAMEBUFFER, m_fbo_write);
+		else
+			glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
+
 		glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, sid, 0);
 		glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, did, 0);
 
@@ -1331,8 +1413,12 @@ void GSDeviceOGL::CopyRect(GSTexture* sTex, GSTexture* dTex, const GSVector4i& r
 		glBlitFramebuffer(r.x, r.y, r.x + w, r.y + h, destX + r.x, destY + r.y, destX + r.x + w, destY + r.y + h, GL_COLOR_BUFFER_BIT, GL_NEAREST);
 		glEnable(GL_SCISSOR_TEST);
 
-		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GLState::fbo);
-		glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+		if(GLState::fbo)
+			glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GLState::fbo);
+		else
+			glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
+
+		glBindFramebuffer(GL_READ_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 	}
 }
 
@@ -2086,7 +2172,10 @@ void GSDeviceOGL::OMSetFBO(GLuint fbo)
 	if (GLState::fbo != fbo)
 	{
 		GLState::fbo = fbo;
-		glBindFramebuffer(GL_DRAW_FRAMEBUFFER, fbo);
+		if(fbo)
+			glBindFramebuffer(GL_DRAW_FRAMEBUFFER, fbo);
+		else
+			glBindFramebuffer(GL_DRAW_FRAMEBUFFER, GL_DEFAULT_FRAMEBUFFER);
 	}
 }
 

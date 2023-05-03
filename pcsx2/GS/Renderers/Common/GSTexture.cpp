@@ -25,6 +25,9 @@ GSTexture::GSTexture() = default;
 
 bool GSTexture::Save(const std::string& fn)
 {
+#ifdef __LIBRETRO__
+	return true;
+#else
 #ifdef PCSX2_DEVBUILD
 	GSPng::Format format = GSPng::RGB_A_PNG;
 #else
@@ -52,6 +55,7 @@ bool GSTexture::Save(const std::string& fn)
 
 	const int compression = GSConfig.PNGCompressionLevel;
 	return GSPng::Save(format, fn, dl->GetMapPointer(), m_size.x, m_size.y, dl->GetMapPitch(), compression, g_gs_device->IsRBSwapped());
+#endif
 }
 
 void GSTexture::Swap(GSTexture* tex)

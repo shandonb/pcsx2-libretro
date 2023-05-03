@@ -15,6 +15,7 @@
 
 #pragma once
 
+#include <climits>
 #include "common/AlignedMalloc.h"
 
 template <class T>

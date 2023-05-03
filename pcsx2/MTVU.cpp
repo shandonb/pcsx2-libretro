@@ -90,7 +90,9 @@ void SaveStateBase::mtvuFreeze()
 
 VU_Thread::VU_Thread()
 {
+#ifndef __LIBRETRO__ /* can't call thread functions/locks from dlload in windows */
 	Reset();
+#endif
 }
 
 VU_Thread::~VU_Thread()

@@ -145,8 +145,10 @@ private:
 	wil::com_ptr_nothrow<ID3D11DeviceContext1> m_ctx;
 	wil::com_ptr_nothrow<ID3DUserDefinedAnnotation> m_annotation;
 
+#ifndef __LIBRETRO__
 	wil::com_ptr_nothrow<IDXGISwapChain1> m_swap_chain;
 	wil::com_ptr_nothrow<ID3D11RenderTargetView> m_swap_chain_rtv;
+#endif
 
 	wil::com_ptr_nothrow<ID3D11Buffer> m_vb;
 	wil::com_ptr_nothrow<ID3D11Buffer> m_ib;
@@ -304,6 +306,9 @@ public:
 
 	bool SetGPUTimingEnabled(bool enabled) override;
 	float GetAndResetAccumulatedGPUTime() override;
+
+	void ResetAPIState() override;
+	void RestoreAPIState() override;
 
 	void DrawPrimitive();
 	void DrawIndexedPrimitive();

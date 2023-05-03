@@ -28,7 +28,9 @@
 #include <malloc.h>
 #endif
 
-#if defined(_WIN32) && !defined(_M_ARM64)
+#if defined(__LIBRETRO__)
+#include "common/GL/ContextRetroGL.h"
+#elif defined(_WIN32) && !defined(_M_ARM64)
 #include "common/GL/ContextWGL.h"
 #elif defined(__APPLE__)
 #include "common/GL/ContextAGL.h"
@@ -89,6 +91,9 @@ namespace GL
 		}
 
 		std::unique_ptr<Context> context;
+#if defined(__LIBRETRO__)
+		context = ContextRetroGL::Create(wi, versions_to_try);
+#else
 #if defined(_WIN32) && !defined(_M_ARM64)
 		context = ContextWGL::Create(wi, versions_to_try);
 #elif defined(__APPLE__)
@@ -103,6 +108,7 @@ namespace GL
 #if defined(WAYLAND_API)
 		if (wi.type == WindowInfo::Type::Wayland)
 			context = ContextEGLWayland::Create(wi, versions_to_try);
+#endif
 #endif
 
 		if (!context)

@@ -632,7 +632,7 @@ __forceinline
 			/*(PlayMode&4) ? StereoOut32::Empty : */ ApplyVolume(Cores[0].ReadInput(), Cores[0].InpVol),
 
 			// CDDA is on Core 1:
-			(PlayMode & 8) ? StereoOut32::Empty : ApplyVolume(Cores[1].ReadInput(), Cores[1].InpVol)};
+			(PlayMode & 8) ? StereoOut32(0, 0) : ApplyVolume(Cores[1].ReadInput(), Cores[1].InpVol)};
 
 #ifdef PCSX2_DEVBUILD
 	WaveDump::WriteCore(0, CoreSrc_Input, InputData[0]);
@@ -644,10 +644,10 @@ __forceinline
 	MixCoreVoices(VoiceData[0], 0);
 	MixCoreVoices(VoiceData[1], 1);
 
-	StereoOut32 Ext(Cores[0].Mix(VoiceData[0], InputData[0], StereoOut32::Empty));
+	StereoOut32 Ext(Cores[0].Mix(VoiceData[0], InputData[0], StereoOut32(0, 0)));
 
 	if ((PlayMode & 4) || (Cores[0].Mute != 0))
-		Ext = StereoOut32::Empty;
+		Ext = StereoOut32(0, 0);
 	else
 	{
 		Ext = clamp_mix(ApplyVolume(Ext, Cores[0].MasterVol));

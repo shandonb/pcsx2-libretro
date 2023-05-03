@@ -140,9 +140,11 @@ public:
 
 private:
 	ComPtr<IDXGIFactory5> m_dxgi_factory;
+#ifndef __LIBRETRO__
 	ComPtr<IDXGISwapChain1> m_swap_chain;
 	std::vector<D3D12::Texture> m_swap_chain_buffers;
 	u32 m_current_swap_chain_buffer = 0;
+#endif
 
 	bool m_allow_tearing_supported = false;
 	bool m_using_allow_tearing = false;
@@ -264,6 +266,9 @@ public:
 
 	bool SetGPUTimingEnabled(bool enabled) override;
 	float GetAndResetAccumulatedGPUTime() override;
+
+	void ResetAPIState() override;
+	void RestoreAPIState() override;
 
 	void PushDebugGroup(const char* fmt, ...) override;
 	void PopDebugGroup() override;

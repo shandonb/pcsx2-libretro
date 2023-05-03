@@ -216,6 +216,14 @@ bool GSDevice::AcquireWindow(bool recreate_window)
 	return true;
 }
 
+void GSDevice::ResetAPIState()
+{
+}
+
+void GSDevice::RestoreAPIState()
+{
+}
+
 bool GSDevice::GetHostRefreshRate(float* refresh_rate)
 {
 	if (m_window_info.surface_refresh_rate > 0.0f)

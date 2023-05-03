@@ -369,6 +369,7 @@ void GSDumpReplayerCpuClear(u32 addr, u32 size)
 
 void GSDumpReplayer::RenderUI()
 {
+#ifndef __LIBRETRO__
 	const float scale = ImGuiManager::GetGlobalScale();
 	const float shadow_offset = std::ceil(1.0f * scale);
 	const float margin = std::ceil(10.0f * scale);
@@ -398,4 +399,5 @@ void GSDumpReplayer::RenderUI()
 	DRAW_LINE(font, text.c_str(), IM_COL32(255, 255, 255, 255));
 
 #undef DRAW_LINE
+#endif
 }

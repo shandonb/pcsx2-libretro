@@ -99,3 +99,14 @@ oprofile_data/
 CMakeSettings.json
 /ci-artifacts/
 /out/
+
+bin/*
+build*/
+*.cflags
+*.config
+*.creator
+*.creator.user.*
+*.cxxflags
+*.files
+*.includes
+*.autosave

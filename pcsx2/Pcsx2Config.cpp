@@ -1197,6 +1197,7 @@ void Pcsx2Config::FramerateOptions::LoadSave(SettingsWrapper& wrap)
 	SettingsWrapEntry(SlomoScalar);
 }
 
+#ifndef __LIBRETRO__
 Pcsx2Config::USBOptions::USBOptions()
 {
 	for (u32 i = 0; i < static_cast<u32>(Ports.size()); i++)
@@ -1251,6 +1252,8 @@ bool Pcsx2Config::USBOptions::operator!=(const USBOptions& right) const
 {
 	return !this->operator==(right);
 }
+
+#endif
 
 #ifdef ENABLE_ACHIEVEMENTS
 
@@ -1360,7 +1363,9 @@ void Pcsx2Config::LoadSave(SettingsWrapper& wrap)
 
 	Debugger.LoadSave(wrap);
 	Trace.LoadSave(wrap);
+#ifndef __LIBRETRO__
 	USB.LoadSave(wrap);
+#endif
 
 #ifdef ENABLE_ACHIEVEMENTS
 	Achievements.LoadSave(wrap);

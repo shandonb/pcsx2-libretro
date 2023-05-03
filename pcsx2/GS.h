@@ -362,7 +362,11 @@ public:
 	std::mutex m_lock_Stack;
 #endif
 
+#ifdef __LIBRETRO__
+	std::thread::id m_thread;
+#else
 	std::thread m_thread;
+#endif
 	Threading::ThreadHandle m_thread_handle;
 	std::atomic_bool m_open_flag{false};
 	std::atomic_bool m_shutdown_flag{false};
@@ -407,6 +411,13 @@ public:
 	void PostVsyncStart(bool registers_written);
 	void InitAndReadFIFO(u8* mem, u32 qwc);
 
+#ifdef __LIBRETRO__
+	void StepFrame();
+	void Flush();
+	void SignalVsync();
+	void MainLoop(bool flush_all = false);
+#endif
+
 	void RunOnGSThread(AsyncCallType func);
 	void ApplySettings();
 	void ResizeDisplayWindow(int width, int height, float scale);
@@ -420,10 +431,10 @@ public:
 		u32* width, u32* height, std::vector<u32>* pixels);
 	void SetRunIdle(bool enabled);
 
-protected:
 	bool TryOpenGS();
 	void CloseGS();
 
+protected:
 	void ThreadEntryPoint();
 	void MainLoop();
 

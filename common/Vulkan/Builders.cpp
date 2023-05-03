@@ -13,6 +13,7 @@
  *  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <limits>
 #include "common/Vulkan/Builders.h"
 #include "common/Vulkan/Util.h"
 #include "common/Assertions.h"

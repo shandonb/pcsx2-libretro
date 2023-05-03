@@ -45,6 +45,7 @@ void gsReset()
 
 void gsUpdateFrequency(Pcsx2Config& config)
 {
+#ifndef __LIBRETRO__
 	if (config.GS.FrameLimitEnable)
 	{
 		switch (config.LimiterMode)
@@ -66,6 +67,7 @@ void gsUpdateFrequency(Pcsx2Config& config)
 		}
 	}
 	else
+#endif
 	{
 		config.GS.LimitScalar = 0.0f;
 	}

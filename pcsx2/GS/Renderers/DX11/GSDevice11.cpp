@@ -35,6 +35,11 @@
 #include <d3dcompiler.h>
 #include <dxgidebug.h>
 
+#ifdef __LIBRETRO__
+#include "libretro_d3d.h"
+extern retro_environment_t environ_cb;
+#endif
+
 // #define REPORT_LEAKED_OBJECTS 1
 
 static constexpr std::array<float, 4> s_present_clear_color = {};
@@ -81,7 +86,24 @@ bool GSDevice11::Create()
 {
 	if (!GSDevice::Create())
 		return false;
+#ifdef __LIBRETRO__
+	retro_hw_render_interface_d3d11 *d3d11 = nullptr;
+	if (!environ_cb(RETRO_ENVIRONMENT_GET_HW_RENDER_INTERFACE, (void **)&d3d11) || !d3d11) {
+		printf("Failed to get HW rendering interface!\n");
+		return false;
+	}
 
+	if (d3d11->interface_version != RETRO_HW_RENDER_INTERFACE_D3D11_VERSION) {
+		printf("HW render interface mismatch, expected %u, got %u!\n", RETRO_HW_RENDER_INTERFACE_D3D11_VERSION, d3d11->interface_version);
+		return false;
+	}
+
+	if (FAILED(d3d11->device->QueryInterface(&m_dev)) || FAILED(d3d11->context->QueryInterface(&m_ctx)))
+	{
+		Console.Error("Direct3D 11.1 is required and not supported.");
+		return false;
+	}
+#else
 	UINT create_flags = 0;
 	if (GSConfig.UseDebugDevice)
 		create_flags |= D3D11_CREATE_DEVICE_DEBUG;
@@ -151,6 +173,7 @@ bool GSDevice11::Create()
 	hr = m_dxgi_factory->CheckFeatureSupport(
 		DXGI_FEATURE_PRESENT_ALLOW_TEARING, &allow_tearing_supported, sizeof(allow_tearing_supported));
 	m_allow_tearing_supported = (SUCCEEDED(hr) && allow_tearing_supported == TRUE);
+#endif
 
 	if (!AcquireWindow(true) || (m_window_info.type != WindowInfo::Type::Surfaceless && !CreateSwapChain()))
 		return false;
@@ -558,11 +581,16 @@ void GSDevice11::SetFeatures()
 
 bool GSDevice11::HasSurface() const
 {
+#ifdef __LIBRETRO__
+	return true;
+#else
 	return static_cast<bool>(m_swap_chain);
+#endif
 }
 
 bool GSDevice11::GetHostRefreshRate(float* refresh_rate)
 {
+#ifndef __LIBRETRO__
 	if (m_swap_chain && m_is_exclusive_fullscreen)
 	{
 		DXGI_SWAP_CHAIN_DESC desc;
@@ -576,7 +604,7 @@ bool GSDevice11::GetHostRefreshRate(float* refresh_rate)
 			return true;
 		}
 	}
-
+#endif
 	return GSDevice::GetHostRefreshRate(refresh_rate);
 }
 
@@ -587,6 +615,7 @@ void GSDevice11::SetVSync(VsyncMode mode)
 
 bool GSDevice11::CreateSwapChain()
 {
+#ifndef __LIBRETRO__
 	constexpr DXGI_FORMAT swap_chain_format = DXGI_FORMAT_R8G8B8A8_UNORM;
 
 	if (m_window_info.type != WindowInfo::Type::Win32)
@@ -683,6 +712,7 @@ bool GSDevice11::CreateSwapChain()
 	hr = m_dxgi_factory->MakeWindowAssociation(window_hwnd, DXGI_MWA_NO_WINDOW_CHANGES);
 	if (FAILED(hr))
 		Console.Warning("MakeWindowAssociation() to disable ALT+ENTER failed");
+#endif
 
 	if (!CreateSwapChainRTV())
 	{
@@ -690,14 +720,17 @@ bool GSDevice11::CreateSwapChain()
 		return false;
 	}
 
+#ifndef __LIBRETRO__
 	// Render a frame as soon as possible to clear out whatever was previously being displayed.
 	m_ctx->ClearRenderTargetView(m_swap_chain_rtv.get(), s_present_clear_color.data());
 	m_swap_chain->Present(0, m_using_allow_tearing ? DXGI_PRESENT_ALLOW_TEARING : 0);
+#endif
 	return true;
 }
 
 bool GSDevice11::CreateSwapChainRTV()
 {
+#ifndef __LIBRETRO__
 	wil::com_ptr_nothrow<ID3D11Texture2D> backbuffer;
 	HRESULT hr = m_swap_chain->GetBuffer(0, IID_PPV_ARGS(backbuffer.put()));
 	if (FAILED(hr))
@@ -738,12 +771,13 @@ bool GSDevice11::CreateSwapChainRTV()
 			m_window_info.surface_refresh_rate = 0.0f;
 		}
 	}
-
+#endif
 	return true;
 }
 
 void GSDevice11::DestroySwapChain()
 {
+#ifndef __LIBRETRO__
 	if (!m_swap_chain)
 		return;
 
@@ -756,6 +790,7 @@ void GSDevice11::DestroySwapChain()
 
 	m_swap_chain.reset();
 	m_is_exclusive_fullscreen = false;
+#endif
 }
 
 bool GSDevice11::UpdateWindow()
@@ -830,6 +865,7 @@ std::string GSDevice11::GetDriverInfo() const
 
 void GSDevice11::ResizeWindow(s32 new_window_width, s32 new_window_height, float new_window_scale)
 {
+#ifndef __LIBRETRO__
 	if (!m_swap_chain || m_is_exclusive_fullscreen)
 		return;
 
@@ -847,6 +883,7 @@ void GSDevice11::ResizeWindow(s32 new_window_width, s32 new_window_height, float
 
 	if (!CreateSwapChainRTV())
 		pxFailRel("Failed to recreate swap chain RTV after resize");
+#endif
 }
 
 bool GSDevice11::SupportsExclusiveFullscreen() const
@@ -856,6 +893,7 @@ bool GSDevice11::SupportsExclusiveFullscreen() const
 
 GSDevice::PresentResult GSDevice11::BeginPresent(bool frame_skip)
 {
+#ifndef __LIBRETRO__
 	if (frame_skip || !m_swap_chain)
 		return PresentResult::FrameSkipped;
 
@@ -893,12 +931,13 @@ GSDevice::PresentResult GSDevice11::BeginPresent(bool frame_skip)
 	const GSVector2i size = GetWindowSize();
 	SetViewport(size);
 	SetScissor(GSVector4i::loadh(size));
-
+#endif
 	return PresentResult::OK;
 }
 
 void GSDevice11::EndPresent()
 {
+#ifndef __LIBRETRO__
 	RenderImGui();
 
 	// See note in BeginPresent() for why it's conditional on vsync-off.
@@ -913,7 +952,7 @@ void GSDevice11::EndPresent()
 
 	if (m_gpu_timing_enabled)
 		KickTimestampQuery();
-
+#endif
 	// clear out the swap chain view, it might get resized..
 	OMSetRenderTargets(nullptr, nullptr, nullptr);
 }
@@ -1030,6 +1069,45 @@ float GSDevice11::GetAndResetAccumulatedGPUTime()
 	const float value = m_accumulated_gpu_time;
 	m_accumulated_gpu_time = 0.0f;
 	return value;
+}
+
+void GSDevice11::ResetAPIState()
+{
+	// Clear out the GS, since the imgui draw doesn't get rid of it.
+	m_ctx->GSSetShader(nullptr, nullptr, 0);
+}
+
+void GSDevice11::RestoreAPIState()
+{
+	const UINT vb_offset = 0;
+	m_ctx->IASetVertexBuffers(0, 1, m_vb.addressof(), &m_state.vb_stride, &vb_offset);
+	m_ctx->IASetIndexBuffer(m_ib.get(), DXGI_FORMAT_R16_UINT, 0);
+	m_ctx->IASetInputLayout(m_state.layout);
+	m_ctx->IASetPrimitiveTopology(m_state.topology);
+	m_ctx->VSSetShader(m_state.vs, nullptr, 0);
+	m_ctx->VSSetConstantBuffers(0, 1, &m_state.vs_cb);
+	m_ctx->PSSetShader(m_state.ps, nullptr, 0);
+	m_ctx->PSSetConstantBuffers(0, 1, &m_state.ps_cb);
+	m_ctx->IASetIndexBuffer(m_state.index_buffer, DXGI_FORMAT_R16_UINT, 0);
+
+	const CD3D11_VIEWPORT vp(0.0f, 0.0f,
+		static_cast<float>(m_state.viewport.x), static_cast<float>(m_state.viewport.y),
+		0.0f, 1.0f);
+	m_ctx->RSSetViewports(1, &vp);
+	m_ctx->RSSetScissorRects(1, reinterpret_cast<const D3D11_RECT*>(&m_state.scissor));
+	m_ctx->RSSetState(m_rs.get());
+
+	m_ctx->OMSetDepthStencilState(m_state.dss, m_state.sref);
+
+	const float blend_factors[4] = { m_state.bf, m_state.bf, m_state.bf, m_state.bf };
+	m_ctx->OMSetBlendState(m_state.bs, blend_factors, 0xFFFFFFFFu);
+
+	PSUpdateShaderState();
+
+	if (m_state.rt_view)
+		m_ctx->OMSetRenderTargets(1, &m_state.rt_view, m_state.dsv);
+	else
+		m_ctx->OMSetRenderTargets(0, nullptr, m_state.dsv);
 }
 
 void GSDevice11::DrawPrimitive()
@@ -1300,6 +1378,16 @@ void GSDevice11::StretchRect(GSTexture* sTex, const GSVector4& sRect, GSTexture*
 
 void GSDevice11::PresentRect(GSTexture* sTex, const GSVector4& sRect, GSTexture* dTex, const GSVector4& dRect, PresentShader shader, float shaderTime, bool linear)
 {
+#ifdef __LIBRETRO__
+	ID3D11RenderTargetView *nullView = nullptr;
+	m_ctx->OMSetRenderTargets(1, &nullView, nullptr);
+
+	ID3D11ShaderResourceView* srv = *(GSTexture11*)sTex;
+	m_ctx->PSSetShaderResources(0, 1, &srv);
+
+	extern retro_video_refresh_t video_cb;
+	video_cb(RETRO_HW_FRAME_BUFFER_VALID, sTex->GetWidth(), sTex->GetHeight(), 0);
+#else
 	ASSERT(sTex);
 
 	GSVector2i ds;
@@ -1364,6 +1452,7 @@ void GSDevice11::PresentRect(GSTexture* sTex, const GSVector4& sRect, GSTexture*
 	//
 
 	PSSetShaderResources(nullptr, nullptr);
+#endif
 }
 
 void GSDevice11::UpdateCLUTTexture(GSTexture* sTex, float sScale, u32 offsetX, u32 offsetY, GSTexture* dTex, u32 dOffset, u32 dSize)

@@ -1423,6 +1423,7 @@ static uint cdvdStartSeek(uint newsector, CDVD_MODE_TYPE mode)
 
 void cdvdUpdateTrayState()
 {
+//#ifndef __LIBRETRO__
 	if (cdvd.Tray.cdvdActionSeconds > 0)
 	{
 		if (--cdvd.Tray.cdvdActionSeconds == 0)
@@ -1462,6 +1463,7 @@ void cdvdUpdateTrayState()
 			}
 		}
 	}
+//#endif
 }
 
 void cdvdVsync()

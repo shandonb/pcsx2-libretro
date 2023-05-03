@@ -43,7 +43,11 @@ void CommonHost::Internal::ResetVMHotkeyState()
 
 static void HotkeyAdjustTargetSpeed(double delta)
 {
+#ifdef ENABLE_ACHIEVEMENTS
 	const double min_speed = Achievements::ChallengeModeActive() ? 1.0 : 0.1;
+#else
+	const double min_speed = 1.0;
+#endif
 	EmuConfig.Framerate.NominalScalar = std::max(min_speed, EmuConfig.GS.LimitScalar + delta);
 	VMManager::SetLimiterMode(LimiterModeType::Nominal);
 	Host::AddIconOSDMessage("SpeedChanged", ICON_FA_CLOCK,

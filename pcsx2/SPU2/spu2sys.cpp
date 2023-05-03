@@ -404,10 +404,12 @@ __forceinline void TimeUpdate(u32 cClocks)
 		lClocks = cClocks - dClocks;
 	}
 
+#ifndef __LIBRETRO__
 	if (EmuConfig.SPU2.SynchMode == Pcsx2Config::SPU2Options::SynchronizationMode::ASync)
 		SndBuffer::UpdateTempoChangeAsyncMixing();
 	else
 		TickInterval = 768; // Reset to default, in case the user hotswitched from async to something else.
+#endif
 
 	//Update Mixing Progress
 	while (dClocks >= TickInterval)

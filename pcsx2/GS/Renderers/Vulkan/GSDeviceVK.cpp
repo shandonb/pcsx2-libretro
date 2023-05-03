@@ -486,6 +486,16 @@ float GSDeviceVK::GetAndResetAccumulatedGPUTime()
 	return g_vulkan_context->GetAndResetAccumulatedGPUTime();
 }
 
+void GSDeviceVK::ResetAPIState()
+{
+	EndRenderPass();
+}
+
+void GSDeviceVK::RestoreAPIState()
+{
+	InvalidateCachedState();
+}
+
 #ifdef ENABLE_OGL_DEBUG
 static std::array<float, 3> Palette(float phase, const std::array<float, 3>& a, const std::array<float, 3>& b,
 	const std::array<float, 3>& c, const std::array<float, 3>& d)
@@ -706,7 +716,11 @@ bool GSDeviceVK::CheckFeatures()
 	m_features.provoking_vertex_last = g_vulkan_context->GetOptionalExtensions().vk_ext_provoking_vertex;
 	m_features.dual_source_blend = features.dualSrcBlend && !GSConfig.DisableDualSourceBlend;
 	m_features.clip_control = true;
+#ifdef __APPLE__
+	m_features.vs_expand = false;
+#else
 	m_features.vs_expand = g_vulkan_context->GetOptionalExtensions().vk_khr_shader_draw_parameters;
+#endif
 
 	if (!m_features.dual_source_blend)
 		Console.Warning("Vulkan driver is missing dual-source blending. This will have an impact on performance.");

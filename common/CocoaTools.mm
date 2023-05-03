@@ -71,6 +71,8 @@ void CocoaTools::DestroyMetalLayer(WindowInfo* wi)
 	[view setWantsLayer:NO];
 }
 
+#if !defined(__LIBRETRO__)
+
 // MARK: - Theme Change Handlers
 
 @interface PCSX2KVOHelper : NSObject
@@ -199,3 +201,5 @@ bool CocoaTools::LaunchApplication(std::string_view file)
 		return [[NSWorkspace sharedWorkspace] launchApplicationAtURL:url options:NSWorkspaceLaunchNewInstance configuration:@{} error:nil];
 	}
 }
+
+#endif

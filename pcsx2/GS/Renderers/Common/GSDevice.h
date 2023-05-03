@@ -837,6 +837,9 @@ public:
 	virtual bool Create();
 	virtual void Destroy();
 
+	virtual void ResetAPIState();
+	virtual void RestoreAPIState();
+
 	/// Returns the graphics API used by this device.
 	virtual RenderAPI GetRenderAPI() const = 0;
 
