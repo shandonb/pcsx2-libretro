@@ -1,0 +1,10 @@
+^D:\PCSX2\PCSX2-LIBRETRO\3RDPARTY\JPGD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/jpgd/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

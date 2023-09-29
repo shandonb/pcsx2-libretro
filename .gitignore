@@ -43,7 +43,7 @@ install_log.txt
 bad_shader_*
 
 Debug
-Release
+
 Devel
 
 oprofile_data/
