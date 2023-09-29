@@ -34,7 +34,7 @@ _ReSharper.*
 pcsx2.snapshot_*
 svnrev.h
 
-/build*
+# /build*
 /obj-*
 *.obj
 
