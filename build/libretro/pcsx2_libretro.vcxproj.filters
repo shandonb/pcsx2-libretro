@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\Console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\SPU2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\DEV9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\USB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\InputRecording.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\GL\ContextRetroGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\libretro_vulkan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\Devel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\libretro\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{954A73A8-8BE7-35F7-84F7-A8FA17C14E4C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{517B182D-202A-3D47-9B56-F4581D23BCB4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Devel|x64">
+      <Configuration>Devel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2511E374-4AA0-3D4C-BBD1-E3B35EC4D7FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>pcsx2_libretro</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\Devel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">pcsx2_libretro.dir\Devel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">pcsx2_libretro</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcsx2_libretro.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcsx2_libretro</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcsx2_libretro.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcsx2_libretro</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">pcsx2_libretro.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">pcsx2_libretro</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">pcsx2_libretro.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">pcsx2_libretro</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/Devel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;_DEVEL;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="Devel";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;_DEVEL;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR=\"Devel\";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;_DEVEL;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="Devel";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /GS-</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\pcsx2\Devel\pcsx2.lib;..\common\Devel\common.lib;..\3rdparty\glad\Devel\glad.lib;..\3rdparty\jpgd\Devel\jpgd.lib;..\3rdparty\glslang\Devel\glslang.lib;winmm.lib;..\3rdparty\imgui\Devel\imgui.lib;..\3rdparty\fmt\fmt\Devel\fmt.lib;..\3rdparty\rapidyaml\rapidyaml\Devel\ryml.lib;..\3rdparty\libchdr\Devel\chdr-static.lib;..\3rdparty\lzma\Devel\pcsx2-lzma.lib;..\3rdparty\libzip\libzip\lib\Devel\zip.lib;advapi32.lib;..\3rdparty\cpuinfo\Devel\cpuinfo.lib;..\3rdparty\cpuinfo\deps\clog\Devel\clog.lib;..\3rdparty\zydis\Devel\zydis.lib;..\3rdparty\soundtouch\Devel\soundtouch.lib;..\3rdparty\libpng\Devel\png.lib;..\3rdparty\zlib\Devel\pcsx2-zlib.lib;..\3rdparty\xz\Devel\xz-lzma.lib;..\3rdparty\zstd\Devel\pcsx2-zstd.lib;..\3rdparty\simpleini\Devel\simpleini.lib;..\3rdparty\d3d12memalloc\Devel\D3D12MemAlloc.lib;setupapi.lib;ws2_32.lib;shlwapi.lib;iphlpapi.lib;dsound.lib;dxguid.lib;dinput8.lib;hid.lib;PowrProf.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;strmiids.lib;opengl32.lib;comsuppw.lib;OneCore.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PCSX2/pcsx2-libretro/build/libretro/Devel/pcsx2_libretro.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PCSX2/pcsx2-libretro/build/libretro/Devel/pcsx2_libretro.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;PCSX2_DEBUG;_DEBUG;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="Debug";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;PCSX2_DEBUG;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR=\"Debug\";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;PCSX2_DEBUG;_DEBUG;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="Debug";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /GS-</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\pcsx2\Debug\pcsx2.lib;..\common\Debug\common.lib;..\3rdparty\glad\Debug\glad.lib;..\3rdparty\jpgd\Debug\jpgd.lib;..\3rdparty\glslang\Debug\glslang.lib;winmm.lib;..\3rdparty\imgui\Debug\imgui.lib;..\3rdparty\fmt\fmt\Debug\fmtd.lib;..\3rdparty\rapidyaml\rapidyaml\Debug\ryml.lib;..\3rdparty\libchdr\Debug\chdr-static.lib;..\3rdparty\lzma\Debug\pcsx2-lzma.lib;..\3rdparty\libzip\libzip\lib\Debug\zip.lib;advapi32.lib;..\3rdparty\cpuinfo\Debug\cpuinfo.lib;..\3rdparty\cpuinfo\deps\clog\Debug\clog.lib;..\3rdparty\zydis\Debug\zydis.lib;..\3rdparty\soundtouch\Debug\soundtouch.lib;..\3rdparty\libpng\Debug\png.lib;..\3rdparty\zlib\Debug\pcsx2-zlib.lib;..\3rdparty\xz\Debug\xz-lzma.lib;..\3rdparty\zstd\Debug\pcsx2-zstd.lib;..\3rdparty\simpleini\Debug\simpleini.lib;..\3rdparty\d3d12memalloc\Debug\D3D12MemAlloc.lib;setupapi.lib;ws2_32.lib;shlwapi.lib;iphlpapi.lib;dsound.lib;dxguid.lib;dinput8.lib;hid.lib;PowrProf.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;strmiids.lib;opengl32.lib;comsuppw.lib;OneCore.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PCSX2/pcsx2-libretro/build/libretro/Debug/pcsx2_libretro.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PCSX2/pcsx2-libretro/build/libretro/Debug/pcsx2_libretro.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="Release";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR=\"Release\";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="Release";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /GS-</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\pcsx2\Release\pcsx2.lib;..\common\Release\common.lib;..\3rdparty\glad\Release\glad.lib;..\3rdparty\jpgd\Release\jpgd.lib;..\3rdparty\glslang\Release\glslang.lib;winmm.lib;..\3rdparty\imgui\Release\imgui.lib;..\3rdparty\fmt\fmt\Release\fmt.lib;..\3rdparty\rapidyaml\rapidyaml\Release\ryml.lib;..\3rdparty\libchdr\Release\chdr-static.lib;..\3rdparty\lzma\Release\pcsx2-lzma.lib;..\3rdparty\libzip\libzip\lib\Release\zip.lib;advapi32.lib;..\3rdparty\cpuinfo\Release\cpuinfo.lib;..\3rdparty\cpuinfo\deps\clog\Release\clog.lib;..\3rdparty\zydis\Release\zydis.lib;..\3rdparty\soundtouch\Release\soundtouch.lib;..\3rdparty\libpng\Release\png.lib;..\3rdparty\zlib\Release\pcsx2-zlib.lib;..\3rdparty\xz\Release\xz-lzma.lib;..\3rdparty\zstd\Release\pcsx2-zstd.lib;..\3rdparty\simpleini\Release\simpleini.lib;..\3rdparty\d3d12memalloc\Release\D3D12MemAlloc.lib;setupapi.lib;ws2_32.lib;shlwapi.lib;iphlpapi.lib;dsound.lib;dxguid.lib;dinput8.lib;hid.lib;PowrProf.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;strmiids.lib;opengl32.lib;comsuppw.lib;OneCore.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PCSX2/pcsx2-libretro/build/libretro/Release/pcsx2_libretro.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/PCSX2/pcsx2-libretro/build/libretro/Release/pcsx2_libretro.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="MinSizeRel";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR=\"MinSizeRel\";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="MinSizeRel";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /GS-</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\pcsx2\MinSizeRel\pcsx2.lib;..\common\MinSizeRel\common.lib;..\3rdparty\glad\MinSizeRel\glad.lib;..\3rdparty\jpgd\MinSizeRel\jpgd.lib;..\3rdparty\glslang\MinSizeRel\glslang.lib;winmm.lib;..\3rdparty\imgui\MinSizeRel\imgui.lib;..\3rdparty\fmt\fmt\MinSizeRel\fmt.lib;..\3rdparty\rapidyaml\rapidyaml\MinSizeRel\ryml.lib;..\3rdparty\libchdr\MinSizeRel\chdr-static.lib;..\3rdparty\lzma\MinSizeRel\pcsx2-lzma.lib;..\3rdparty\libzip\libzip\lib\MinSizeRel\zip.lib;advapi32.lib;..\3rdparty\cpuinfo\MinSizeRel\cpuinfo.lib;..\3rdparty\cpuinfo\deps\clog\MinSizeRel\clog.lib;..\3rdparty\zydis\MinSizeRel\zydis.lib;..\3rdparty\soundtouch\MinSizeRel\soundtouch.lib;..\3rdparty\libpng\MinSizeRel\png.lib;..\3rdparty\zlib\MinSizeRel\pcsx2-zlib.lib;..\3rdparty\xz\MinSizeRel\xz-lzma.lib;..\3rdparty\zstd\MinSizeRel\pcsx2-zstd.lib;..\3rdparty\simpleini\MinSizeRel\simpleini.lib;..\3rdparty\d3d12memalloc\MinSizeRel\D3D12MemAlloc.lib;setupapi.lib;ws2_32.lib;shlwapi.lib;iphlpapi.lib;dsound.lib;dxguid.lib;dinput8.lib;hid.lib;PowrProf.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;strmiids.lib;opengl32.lib;comsuppw.lib;OneCore.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PCSX2/pcsx2-libretro/build/libretro/MinSizeRel/pcsx2_libretro.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/PCSX2/pcsx2-libretro/build/libretro/MinSizeRel/pcsx2_libretro.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="RelWithDebInfo";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR=\"RelWithDebInfo\";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__SSE4_1__;DIRECTINPUT_VERSION=0x0800;WINVER=0x0A00;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;LZMA_API_STATIC;WIL_SUPPRESS_EXCEPTIONS;FMT_LOCALE;CPUINFO_SUPPORTED_PLATFORM=1;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;CMAKE_INTDIR="RelWithDebInfo";pcsx2_libretro_EXPORTS</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>%(AdditionalOptions) /GS-</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\include;D:\PCSX2\pcsx2-libretro\pcsx2;D:\PCSX2\pcsx2-libretro\pcsx2\..\3rdparty;D:\PCSX2\pcsx2-libretro\pcsx2\.;D:\PCSX2\pcsx2-libretro\pcsx2\x86;D:\PCSX2\pcsx2-libretro\build\pcsx2;D:\PCSX2\pcsx2-libretro\build\common\include;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\xbyak;D:\PCSX2\pcsx2-libretro\3rdparty\ffmpeg\include;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;D:\PCSX2\pcsx2-libretro\3rdparty\imgui\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src;D:\PCSX2\pcsx2-libretro\3rdparty\libchdr\libchdr\include;D:\PCSX2\pcsx2-libretro\3rdparty\libzip\libzip\lib;D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip;D:\PCSX2\pcsx2-libretro\3rdparty\cpuinfo\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zlib\.;D:\PCSX2\pcsx2-libretro\3rdparty\soundtouch\soundtouch;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\zstd\zstd\lib;D:\PCSX2\pcsx2-libretro\3rdparty\simpleini\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\pcsx2\RelWithDebInfo\pcsx2.lib;..\common\RelWithDebInfo\common.lib;..\3rdparty\glad\RelWithDebInfo\glad.lib;..\3rdparty\jpgd\RelWithDebInfo\jpgd.lib;..\3rdparty\glslang\RelWithDebInfo\glslang.lib;winmm.lib;..\3rdparty\imgui\RelWithDebInfo\imgui.lib;..\3rdparty\fmt\fmt\RelWithDebInfo\fmt.lib;..\3rdparty\rapidyaml\rapidyaml\RelWithDebInfo\ryml.lib;..\3rdparty\libchdr\RelWithDebInfo\chdr-static.lib;..\3rdparty\lzma\RelWithDebInfo\pcsx2-lzma.lib;..\3rdparty\libzip\libzip\lib\RelWithDebInfo\zip.lib;advapi32.lib;..\3rdparty\cpuinfo\RelWithDebInfo\cpuinfo.lib;..\3rdparty\cpuinfo\deps\clog\RelWithDebInfo\clog.lib;..\3rdparty\zydis\RelWithDebInfo\zydis.lib;..\3rdparty\soundtouch\RelWithDebInfo\soundtouch.lib;..\3rdparty\libpng\RelWithDebInfo\png.lib;..\3rdparty\zlib\RelWithDebInfo\pcsx2-zlib.lib;..\3rdparty\xz\RelWithDebInfo\xz-lzma.lib;..\3rdparty\zstd\RelWithDebInfo\pcsx2-zstd.lib;..\3rdparty\simpleini\RelWithDebInfo\simpleini.lib;..\3rdparty\d3d12memalloc\RelWithDebInfo\D3D12MemAlloc.lib;setupapi.lib;ws2_32.lib;shlwapi.lib;iphlpapi.lib;dsound.lib;dxguid.lib;dinput8.lib;hid.lib;PowrProf.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;strmiids.lib;opengl32.lib;comsuppw.lib;OneCore.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/PCSX2/pcsx2-libretro/build/libretro/RelWithDebInfo/pcsx2_libretro.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/PCSX2/pcsx2-libretro/build/libretro/RelWithDebInfo/pcsx2_libretro.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\libretro\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/libretro/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/libretro/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/libretro/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/libretro/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/libretro/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/Devel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\main.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\options.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\input.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\Console.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\SPU2.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\DEV9.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\USB.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\InputRecording.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\GL\ContextRetroGL.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\libretro\libretro_vulkan.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/libretro/CMakeFiles/pcsx2_libretro.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\Devel\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\libretro\CMakeFiles\pcsx2_libretro.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\ZERO_CHECK.vcxproj">
+      <Project>{ADF588FE-1D82-3CC1-BAE1-C4D122ACA396}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\d3d12memalloc\D3D12MemAlloc.vcxproj">
+      <Project>{95E798FB-97C3-30C4-9E17-F3A8AA774308}</Project>
+      <Name>D3D12MemAlloc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\pcsx2\PCSX2.vcxproj">
+      <Project>{A3CF4998-BE59-3745-8B51-DE10956675F7}</Project>
+      <Name>PCSX2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\libchdr\chdr-static.vcxproj">
+      <Project>{49B7BFE9-84F1-3F24-92EC-ACFFECF7649E}</Project>
+      <Name>chdr-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\cpuinfo\deps\clog\clog.vcxproj">
+      <Project>{F6FE96E4-2CC9-385E-ACC7-A874BFBFD825}</Project>
+      <Name>clog</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\common\common.vcxproj">
+      <Project>{5FA8977E-2AF3-3BAD-8108-44B164FAEA21}</Project>
+      <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\cpuinfo\cpuinfo.vcxproj">
+      <Project>{6C20B6ED-3362-3EB4-9D2F-809221D5D35D}</Project>
+      <Name>cpuinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\fmt\fmt\fmt.vcxproj">
+      <Project>{94A3B218-AD9A-36E3-B46C-5D2D80DD9A29}</Project>
+      <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\glad\glad.vcxproj">
+      <Project>{C4FB4169-F58F-31DA-A905-9BCEB82720E2}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\glslang\glslang.vcxproj">
+      <Project>{19621E51-D304-37A3-A12B-BFD1278185A0}</Project>
+      <Name>glslang</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\imgui\imgui.vcxproj">
+      <Project>{FCE6DFAD-246B-36D3-B735-1EFB5CBC78B5}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\jpgd\jpgd.vcxproj">
+      <Project>{AF1A4359-B0A8-36A4-9A9A-F4C67A1D666E}</Project>
+      <Name>jpgd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\lzma\pcsx2-lzma.vcxproj">
+      <Project>{010D8BE2-D6A6-3CFD-AF55-9A48F99A40B9}</Project>
+      <Name>pcsx2-lzma</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\zlib\pcsx2-zlib.vcxproj">
+      <Project>{9BDD1CF8-026A-31F2-A815-CC953B71E1D5}</Project>
+      <Name>pcsx2-zlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\zstd\pcsx2-zstd.vcxproj">
+      <Project>{BFF2E432-C942-34D4-ACF6-5727170B7B7D}</Project>
+      <Name>pcsx2-zstd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\libpng\png.vcxproj">
+      <Project>{96F13B4D-E5BB-3AD8-B99E-A94AD0F41ECB}</Project>
+      <Name>png</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\rapidyaml\rapidyaml\ryml.vcxproj">
+      <Project>{521F53C3-82BE-3ADE-847B-BD59369C1AD0}</Project>
+      <Name>ryml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\simpleini\simpleini.vcxproj">
+      <Project>{01FA9B40-644C-394E-8F81-34EBBC7A174A}</Project>
+      <Name>simpleini</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\soundtouch\soundtouch.vcxproj">
+      <Project>{E79D4CB6-7205-36D0-99A3-9C2C2DA25B3A}</Project>
+      <Name>soundtouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\xz-lzma.vcxproj">
+      <Project>{8AA08881-E002-382D-82D7-63B73FCD1417}</Project>
+      <Name>xz-lzma</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\libzip\libzip\lib\zip.vcxproj">
+      <Project>{FBC60BFF-2C95-3808-A718-D85FA650A66B}</Project>
+      <Name>zip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\zydis.vcxproj">
+      <Project>{D0752FA3-90AF-3D67-8705-340A732DE184}</Project>
+      <Name>zydis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

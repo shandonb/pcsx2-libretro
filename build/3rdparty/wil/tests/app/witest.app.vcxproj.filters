@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\CommonTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\ComTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\FileSystemTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\NtResultTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\ResourceTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\ResultTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\Rpc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\SafeCastTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\WistdTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\wiTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\StlTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\UniqueWinRTEventTokenTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\WinRTTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\tests\app\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{517B182D-202A-3D47-9B56-F4581D23BCB4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

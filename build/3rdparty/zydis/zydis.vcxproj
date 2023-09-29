@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Devel|x64">
+      <Configuration>Devel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D0752FA3-90AF-3D67-8705-340A732DE184}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>zydis</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\Devel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">zydis.dir\Devel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">zydis</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">zydis.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">zydis</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">zydis.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">zydis</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">zydis.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">zydis</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">zydis.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">zydis</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR=\"Devel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ZYCORE_STATIC_DEFINE;ZYDIS_STATIC_DEFINE;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src;D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/zydis/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/zydis/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/zydis/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/zydis/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/zydis/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/zydis/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/zydis/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/zydis/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/zydis/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/zydis/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\zydis\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\Allocator.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\API\Memory.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\API\Process.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\API\Synchronization.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\API\Terminal.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\API\Thread.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\ArgParse.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\Bitset.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\Format.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\List.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\String.c">
+      <ObjectFileName>$(IntDir)/dependencies/zycore/src/String.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\Vector.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\src\Zycore.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\Decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\DecoderData.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\Formatter.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\FormatterATT.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\FormatterBase.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\FormatterBuffer.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\FormatterIntel.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\MetaInfo.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\Mnemonic.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\Register.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\SharedData.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\String.c">
+      <ObjectFileName>$(IntDir)/src/String.c.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\Utils.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\src\Zydis.c" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Allocator.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\API\Memory.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\API\Process.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\API\Synchronization.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\API\Terminal.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\API\Thread.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\ArgParse.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Atomic.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Bitset.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Comparison.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Defines.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Format.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Internal\AtomicGNU.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Internal\AtomicMSVC.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\LibC.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\List.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Object.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Status.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\String.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Types.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Vector.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\dependencies\zycore\include\Zycore\Zycore.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\DecoderTypes.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Formatter.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\FormatterBuffer.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Generated\EnumInstructionCategory.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Generated\EnumISAExt.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Generated\EnumISASet.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Generated\EnumMnemonic.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Generated\EnumRegister.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Internal\DecoderData.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Internal\FormatterATT.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Internal\FormatterBase.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Internal\FormatterIntel.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Internal\SharedData.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Internal\String.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\MetaInfo.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Mnemonic.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Register.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\SharedTypes.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\ShortString.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Status.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Utils.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\zydis\include\Zydis\Zydis.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\ZERO_CHECK.vcxproj">
+      <Project>{ADF588FE-1D82-3CC1-BAE1-C4D122ACA396}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

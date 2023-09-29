@@ -1,0 +1,1409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Devel|x64">
+      <Configuration>Devel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FA8977E-2AF3-3BAD-8108-44B164FAEA21}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>common</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\common\Devel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">common.dir\Devel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">common</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\common\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">common.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">common</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\common\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">common.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">common</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\common\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">common.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">common</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\common\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">common.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">common</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/common/common.dir/Devel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;_DEVEL;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;FMT_LOCALE;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;_DEVEL;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;FMT_LOCALE;CMAKE_INTDIR=\"Devel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;_DEVEL;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;FMT_LOCALE;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/common/common.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;PCSX2_DEBUG;_DEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;FMT_LOCALE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;PCSX2_DEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;FMT_LOCALE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;PCSX2_DEVBUILD;PCSX2_DEBUG;_DEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;FMT_LOCALE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/common/common.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/common/common.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:externConstexpr</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>D:/PCSX2/pcsx2-libretro/build/common/common.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_ARCH_64=1;_M_X86=1;TIXML_USE_STL;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;ENABLE_OPENGL;ENABLE_VULKAN;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;FMT_LOCALE;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\common\..\3rdparty\include;D:\PCSX2\pcsx2-libretro\common\..;D:\PCSX2\pcsx2-libretro\libretro;D:\PCSX2\pcsx2-libretro\3rdparty\glad\include;D:\PCSX2\pcsx2-libretro\3rdparty\vulkan-headers\include;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\glslang;D:\PCSX2\pcsx2-libretro\3rdparty\glslang\include;D:\PCSX2\pcsx2-libretro\3rdparty\wil\include;D:\PCSX2\pcsx2-libretro\3rdparty\d3d12memalloc\include;D:\PCSX2\pcsx2-libretro\3rdparty\libpng\.;D:\PCSX2\pcsx2-libretro\3rdparty\jpgd;D:\PCSX2\pcsx2-libretro\3rdparty\fmt\fmt\include;D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\common\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASM_MASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_MASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASM_MASMCompiler.cmake;D:\PCSX2\pcsx2-libretro\build\CMakeFiles\3.27.6\CMakeASM_MASMCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASM_MASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_MASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASM_MASMCompiler.cmake;D:\PCSX2\pcsx2-libretro\build\CMakeFiles\3.27.6\CMakeASM_MASMCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASM_MASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_MASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASM_MASMCompiler.cmake;D:\PCSX2\pcsx2-libretro\build\CMakeFiles\3.27.6\CMakeASM_MASMCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASM_MASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_MASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASM_MASMCompiler.cmake;D:\PCSX2\pcsx2-libretro\build\CMakeFiles\3.27.6\CMakeASM_MASMCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/common/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeASM_MASMInformation.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_MASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeTestASM_MASMCompiler.cmake;D:\PCSX2\pcsx2-libretro\build\CMakeFiles\3.27.6\CMakeASM_MASMCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\common.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/common.dir/Devel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/common.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/common.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/common.dir/MinSizeRel/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/common.dir/RelWithDebInfo/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\AlignedMalloc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\SafeArray.inl" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Console.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\CrashHandler.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\DynamicLibrary.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Exceptions.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\FastJmp.cpp">
+      <ObjectFileName>$(IntDir)/FastJmp.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\FileSystem.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\General.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Image.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\HTTPDownloader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\MemorySettingsInterface.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Misc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\MD5Digest.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\PrecompiledHeader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Perf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\ProgressCallback.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\ReadbackSpinManager.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Semaphore.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\SettingsWrapper.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\StringUtil.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Timer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\ThreadPool.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\WAVWriter.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\WindowInfo.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\avx.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\bmi.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\cpudetect.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\fpu.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\groups.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\jmp.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\legacy.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\legacy_sse.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\movs.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\simd.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\LnxCpuDetect.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\WinCpuDetect.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\emitter\x86emitter.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Darwin\DarwinThreads.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Darwin\DarwinMisc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Darwin\DarwinSemaphore.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Linux\LnxHostSys.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Linux\LnxThreads.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Linux\LnxMisc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Windows\WinThreads.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Windows\WinHostSys.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Windows\WinMisc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Align.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\AlignedMalloc.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Assertions.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\boost_spsc_queue.hpp" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Console.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\CrashHandler.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\DynamicLibrary.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Easing.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\EnumOps.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Exceptions.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\FastJmp.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\FileSystem.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\General.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\HashCombine.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\HeterogeneousContainers.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Image.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\LRUCache.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\HeapArray.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\HTTPDownloader.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\MemcpyFast.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\MemorySettingsInterface.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\MemsetFast.inl" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\MD5Digest.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\MRCHelpers.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Path.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\PrecompiledHeader.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\ProgressCallback.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\ReadbackSpinManager.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\RedtapeWilCom.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\RedtapeWindows.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\SafeArray.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\ScopedGuard.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\SettingsInterface.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\SettingsWrapper.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\StringUtil.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Timer.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Threading.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\ThreadPool.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\TraceLog.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\WAVWriter.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\WindowInfo.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\cpudetect_internal.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\dwshift.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\group1.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\group2.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\group3.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\helpers.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\incdec.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\jmpcall.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\movs.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\simd_arithmetic.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\simd_comparisons.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\simd_helpers.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\simd_moremovs.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\simd_shufflepack.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\simd_templated_helpers.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\test.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\implement\xchg.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\instructions.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\internal.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\legacy_instructions.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\legacy_internal.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\legacy_types.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\tools.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\x86emitter.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\emitter\x86types.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\GL\Context.cpp">
+      <ObjectFileName>$(IntDir)/GL/Context.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\GL\Program.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\GL\ShaderCache.cpp">
+      <ObjectFileName>$(IntDir)/GL/ShaderCache.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\GL\StreamBuffer.cpp">
+      <ObjectFileName>$(IntDir)/GL/StreamBuffer.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\GL\Context.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\GL\Program.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\GL\ShaderCache.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\GL\StreamBuffer.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\ShaderCache.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/ShaderCache.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Texture.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/Texture.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Loader.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\ShaderCompiler.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/ShaderCompiler.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Util.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/Util.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\SwapChain.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\StreamBuffer.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/StreamBuffer.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Context.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/Context.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Builders.cpp">
+      <ObjectFileName>$(IntDir)/Vulkan/Builders.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\vk_mem_alloc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Context.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Texture.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\ShaderCompiler.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\SwapChain.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Builders.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\StreamBuffer.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\ShaderCache.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\EntryPoints.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Loader.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\Vulkan\Util.h" />
+    <MASM Include="D:\PCSX2\pcsx2-libretro\common\FastJmp.asm">
+      <ObjectFileName>$(IntDir)/FastJmp.asm.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">NotUsing</PrecompiledHeader>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">NotUsing</PrecompiledHeader>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">NotUsing</PrecompiledHeader>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </MASM>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\HTTPDownloaderWinHTTP.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\HTTPDownloaderWinHTTP.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\StackWalker.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\StackWalker.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D11\ShaderCache.cpp">
+      <ObjectFileName>$(IntDir)/D3D11/ShaderCache.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D11\ShaderCache.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D11\ShaderCompiler.cpp">
+      <ObjectFileName>$(IntDir)/D3D11/ShaderCompiler.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D11\ShaderCompiler.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Builders.cpp">
+      <ObjectFileName>$(IntDir)/D3D12/Builders.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Builders.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Context.cpp">
+      <ObjectFileName>$(IntDir)/D3D12/Context.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Context.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\DescriptorHeapManager.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\DescriptorHeapManager.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\ShaderCache.cpp">
+      <ObjectFileName>$(IntDir)/D3D12/ShaderCache.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\ShaderCache.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\StreamBuffer.cpp">
+      <ObjectFileName>$(IntDir)/D3D12/StreamBuffer.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\StreamBuffer.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Texture.cpp">
+      <ObjectFileName>$(IntDir)/D3D12/Texture.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Texture.h" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Util.cpp">
+      <ObjectFileName>$(IntDir)/D3D12/Util.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Devel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/MinSizeRel/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/PCSX2/pcsx2-libretro/build/common/CMakeFiles/common.dir/RelWithDebInfo/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\common\D3D12\Util.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\common.dir\Devel\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\common.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\common.dir\Release\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\common.dir\MinSizeRel\cmake_pch.hxx" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\build\common\CMakeFiles\common.dir\RelWithDebInfo\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\ZERO_CHECK.vcxproj">
+      <Project>{ADF588FE-1D82-3CC1-BAE1-C4D122ACA396}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\d3d12memalloc\D3D12MemAlloc.vcxproj">
+      <Project>{95E798FB-97C3-30C4-9E17-F3A8AA774308}</Project>
+      <Name>D3D12MemAlloc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\fmt\fmt\fmt.vcxproj">
+      <Project>{94A3B218-AD9A-36E3-B46C-5D2D80DD9A29}</Project>
+      <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\glad\glad.vcxproj">
+      <Project>{C4FB4169-F58F-31DA-A905-9BCEB82720E2}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\glslang\glslang.vcxproj">
+      <Project>{19621E51-D304-37A3-A12B-BFD1278185A0}</Project>
+      <Name>glslang</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\jpgd\jpgd.vcxproj">
+      <Project>{AF1A4359-B0A8-36A4-9A9A-F4C67A1D666E}</Project>
+      <Name>jpgd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\zlib\pcsx2-zlib.vcxproj">
+      <Project>{9BDD1CF8-026A-31F2-A815-CC953B71E1D5}</Project>
+      <Name>pcsx2-zlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\libpng\png.vcxproj">
+      <Project>{96F13B4D-E5BB-3AD8-B99E-A94AD0F41ECB}</Project>
+      <Name>png</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

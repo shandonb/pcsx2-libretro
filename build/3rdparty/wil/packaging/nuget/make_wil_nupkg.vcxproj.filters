@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\build\CMakeFiles\af48d600e90025d63b9649047ba1871c\Microsoft.Windows.ImplementationLibrary.0.0.0.nupkg.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\build\CMakeFiles\e675e4fd5777afa92edb81e2134d339f\make_wil_nupkg.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\3rdparty\wil\packaging\nuget\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\PCSX2\pcsx2-libretro\build\3rdparty\wil\packaging\nuget\CMakeFiles\make_wil_nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{ABE27CBB-87DE-38F6-A1F1-5B89935E1759}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

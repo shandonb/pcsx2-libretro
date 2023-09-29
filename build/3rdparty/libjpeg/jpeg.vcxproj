@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Devel|x64">
+      <Configuration>Devel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1BAEFBA1-D95C-33CB-A938-E98F67D3C6F8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>jpeg</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\Devel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">jpeg.dir\Devel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">jpeg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">jpeg.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">jpeg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">jpeg.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">jpeg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">jpeg.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">jpeg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">jpeg.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">jpeg</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR=\"Devel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/libjpeg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/libjpeg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/libjpeg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/libjpeg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/libjpeg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/libjpeg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/libjpeg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/libjpeg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/libjpeg/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/libjpeg/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\libjpeg\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jaricom.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcapimin.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcapistd.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcarith.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jccoefct.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jccolor.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcdctmgr.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jchuff.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcinit.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcmainct.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcmarker.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcmaster.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcomapi.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcparam.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcprepct.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jcsample.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jctrans.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdapimin.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdapistd.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdarith.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdatadst.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdatasrc.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdcoefct.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdcolor.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jddctmgr.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdhuff.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdinput.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdmainct.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdmarker.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdmaster.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdmerge.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdpostct.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdsample.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdtrans.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jerror.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jfdctflt.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jfdctfst.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jfdctint.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jidctflt.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jidctfst.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jidctint.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jmemansi.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jmemmgr.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jquant1.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jquant2.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jutils.c" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jconfig.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jdct.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jerror.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jinclude.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jmemsys.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jmorecfg.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jpegint.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jpeglib.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\libjpeg\jversion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\ZERO_CHECK.vcxproj">
+      <Project>{ADF588FE-1D82-3CC1-BAE1-C4D122ACA396}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

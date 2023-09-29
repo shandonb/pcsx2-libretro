@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\common.cpp">
+      <Filter>c4\yml</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\node.cpp">
+      <Filter>c4\yml</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\parse.cpp">
+      <Filter>c4\yml</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\preprocess.cpp">
+      <Filter>c4\yml</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\tree.cpp">
+      <Filter>c4\yml</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\base64.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\char_traits.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\error.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\format.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\language.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\memory_resource.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\memory_util.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\utf.cpp">
+      <Filter>c4core\c4</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\ryml.hpp" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\ryml_std.hpp" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\detail\checks.hpp">
+      <Filter>c4\yml\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\detail\parser_dbg.hpp">
+      <Filter>c4\yml\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\detail\print.hpp">
+      <Filter>c4\yml\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\detail\stack.hpp">
+      <Filter>c4\yml\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\common.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\emit.def.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\emit.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\export.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\node.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\parse.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\preprocess.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\std\map.hpp">
+      <Filter>c4\yml\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\std\std.hpp">
+      <Filter>c4\yml\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\std\string.hpp">
+      <Filter>c4\yml\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\std\vector.hpp">
+      <Filter>c4\yml\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\tree.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\writer.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\c4\yml\yml.hpp">
+      <Filter>c4\yml</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\allocator.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\base64.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\blob.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\bitmask.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\charconv.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\c4_pop.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\c4_push.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\char_traits.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\common.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\compiler.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\config.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\cpu.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ctor_dtor.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\dump.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\enum.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\error.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\export.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\format.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\hash.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\language.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\memory_resource.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\memory_util.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\platform.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\preprocessor.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\restrict.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\span.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\std.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\std_fwd.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\string.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\string_fwd.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\tuple.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\vector.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\std\vector_fwd.hpp">
+      <Filter>c4core\c4\std</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\substr.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\substr_fwd.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\szconv.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\type_name.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\types.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\unrestrict.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\utf.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\windows.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\windows_pop.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\windows_push.hpp">
+      <Filter>c4core\c4</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\debugbreak\debugbreak.h">
+      <Filter>c4core\c4\ext\debugbreak</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\rng\rng.hpp">
+      <Filter>c4core\c4\ext\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\sg14\inplace_function.h">
+      <Filter>c4core\c4\ext\sg14</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float.hpp">
+      <Filter>c4core\c4\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\ext\fast_float_all.h">
+      <Filter>c4core\c4\ext</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\src\ryml.natvis" />
+    <Natvis Include="D:\PCSX2\pcsx2-libretro\3rdparty\rapidyaml\rapidyaml\ext\c4core\src\c4\c4core.natvis">
+      <Filter>c4core\c4</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="c4">
+      <UniqueIdentifier>{4BC1A15C-68C9-3AC4-9981-E214D97D7F40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4\yml">
+      <UniqueIdentifier>{846BEA91-8C48-3ECC-9B20-C9A3FFFF6C84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4\yml\detail">
+      <UniqueIdentifier>{8EC1ADDF-7548-31EF-86C9-4B9B83D05362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4\yml\std">
+      <UniqueIdentifier>{E4EB2D8B-ADBE-3630-87D9-BA8ED6C156A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core">
+      <UniqueIdentifier>{50A57661-3CE4-3CA9-A68F-DA145D4DE4C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core\c4">
+      <UniqueIdentifier>{5A142AD0-5A13-34BE-8144-BF921DF5EB15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core\c4\ext">
+      <UniqueIdentifier>{E738F73C-C47C-3917-96C0-48D43EDE2E52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core\c4\ext\debugbreak">
+      <UniqueIdentifier>{C673CDAA-FF61-3765-8D88-404E5985D7FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core\c4\ext\rng">
+      <UniqueIdentifier>{0FFC630E-71CB-385F-BAFE-E06545EB82BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core\c4\ext\sg14">
+      <UniqueIdentifier>{12B5DA55-46BE-3E4A-8C5D-6B4AC41BB7CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="c4core\c4\std">
+      <UniqueIdentifier>{CF517949-D908-3FCD-96B5-67B2CC4F353D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

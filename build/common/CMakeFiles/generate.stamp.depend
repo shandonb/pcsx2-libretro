@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeASMCompiler.cmake.in
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeASMInformation.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeASM_MASMInformation.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineASMCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineASM_MASMCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestASMCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeTestASM_MASMCompiler.cmake
+D:/PCSX2/pcsx2-libretro/build/CMakeFiles/3.27.6/CMakeASM_MASMCompiler.cmake
+D:/PCSX2/pcsx2-libretro/common/CMakeLists.txt

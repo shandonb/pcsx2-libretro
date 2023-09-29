@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/CMakeLists.txt
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4Project.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/compat.cmake
+D:/PCSX2/pcsx2-libretro/build/3rdparty/rapidyaml/rapidyaml/subprojects/c4core/build/export_cases/cmake/c4coreConfig.cmake.in

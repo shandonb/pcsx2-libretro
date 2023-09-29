@@ -1,0 +1,13 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/fmt/fmt/CMakeLists.txt
+D:/PCSX2/pcsx2-libretro/3rdparty/fmt/fmt/support/cmake/JoinPaths.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/fmt/fmt/support/cmake/cxx14.cmake

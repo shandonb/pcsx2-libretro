@@ -1,0 +1,20 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/CMakeLists.txt
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/compat.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/ConfigurationTypes.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/CreateSourceGroup.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/GetFlags.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/PVS-Studio.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/PatchUtils.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/PrintVar.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4CatSources.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4Doxygen.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4GetTargetPropertyRecursive.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4Project.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4SanitizeTarget.cmake
+D:/PCSX2/pcsx2-libretro/3rdparty/rapidyaml/rapidyaml/ext/c4core/cmake/c4StaticAnalysis.cmake
+D:/PCSX2/pcsx2-libretro/build/3rdparty/rapidyaml/rapidyaml/export_cases/cmake/rymlConfig.cmake.in

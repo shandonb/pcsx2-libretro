@@ -34,9 +34,6 @@ _ReSharper.*
 pcsx2.snapshot_*
 svnrev.h
 
-# /build*
-/obj-*
-*.obj
 
 .DS_Store
 Thumbs.db
@@ -62,7 +59,6 @@ oprofile_data/
 /UpgradeLog*.htm
 /.vscode*
 
-/bin/**/*.dll
 /bin/**/*.dmp
 /bin/**/*.exp
 /bin/**/*.ilk
@@ -100,8 +96,7 @@ CMakeSettings.json
 /ci-artifacts/
 /out/
 
-bin/*
-build*/
+
 *.cflags
 *.config
 *.creator

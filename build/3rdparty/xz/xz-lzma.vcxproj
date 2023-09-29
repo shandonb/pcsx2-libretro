@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Devel|x64">
+      <Configuration>Devel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8AA08881-E002-382D-82D7-63B73FCD1417}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>xz-lzma</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\Devel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">xz-lzma.dir\Devel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">xz-lzma</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xz-lzma.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xz-lzma</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xz-lzma.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xz-lzma</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xz-lzma.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">xz-lzma</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xz-lzma.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">xz-lzma</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR=\"Devel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=1;CMAKE_INTDIR="Devel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=2;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H;__LIBRETRO__;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(IncludePaths)</IncludePaths>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api;D:\PCSX2\pcsx2-libretro\3rdparty\xz\.;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder;D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/xz/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/xz/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Devel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/xz/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/xz/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/xz/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/xz/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/xz/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/xz/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/PCSX2/pcsx2-libretro/3rdparty/xz/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/PCSX2/pcsx2-libretro -BD:/PCSX2/pcsx2-libretro/build --check-stamp-file D:/PCSX2/pcsx2-libretro/build/3rdparty/xz/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\PCSX2\pcsx2-libretro\build\3rdparty\xz\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_cpucores.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_physmem.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\check.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc32_fast.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc32_table.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc64_fast.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc64_table.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\sha256.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\alone_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\alone_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\auto_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_buffer_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_buffer_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_header_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_header_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_util.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\common.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\easy_buffer_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\easy_decoder_memusage.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\easy_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\easy_encoder_memusage.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\easy_preset.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_buffer_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_buffer_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_common.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_flags_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_flags_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\hardware_cputhreads.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\hardware_physmem.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\index.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\index_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\index_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\index_hash.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\outqueue.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_buffer_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_buffer_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_encoder_mt.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_flags_common.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_flags_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_flags_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\vli_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\vli_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\vli_size.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_common.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\fastpos_table.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma2_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma2_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_encoder_optimum_fast.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_encoder_optimum_normal.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_encoder_presets.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_encoder_mf.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder\price_table.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\arm.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\armthumb.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\ia64.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\powerpc.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_coder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_decoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_encoder.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\sparc.c" />
+    <ClCompile Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\x86.c" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\mythread.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\sysdefs.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_config.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_cpucores.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_integer.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\common\tuklib_physmem.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\base.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\bcj.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\block.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\check.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\container.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\delta.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\filter.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\hardware.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\index.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\index_hash.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\lzma12.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\stream_flags.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\version.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\api\lzma\vli.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\check.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc32_table_be.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc32_table_le.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc64_table_be.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc64_table_le.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\check\crc_macros.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\alone_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_buffer_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\block_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\easy_preset.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\filter_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\index.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\index_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\memcmplen.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\outqueue.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\common\stream_flags_common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\delta\delta_private.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\fastpos.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma2_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma2_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lzma\lzma_encoder_private.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_encoder_hash.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\lz\lz_encoder_hash_table.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder\price.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder\range_common.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder\range_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\rangecoder\range_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_coder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_decoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_encoder.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\xz\src\liblzma\simple\simple_private.h" />
+    <ClInclude Include="D:\PCSX2\pcsx2-libretro\3rdparty\xz\config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\PCSX2\pcsx2-libretro\build\ZERO_CHECK.vcxproj">
+      <Project>{ADF588FE-1D82-3CC1-BAE1-C4D122ACA396}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

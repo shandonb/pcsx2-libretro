@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\PCSX2\pcsx2-libretro\build\CMakeFiles\e7926e2e2ab86c12656c377291447949\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{ABE27CBB-87DE-38F6-A1F1-5B89935E1759}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
